@@ -5,7 +5,6 @@ public class problem07 extends SuperKarel{
 	public void run(){
 		move();
 		move();
-
 		if(frontIsClear()){
 			move();
 		} else {

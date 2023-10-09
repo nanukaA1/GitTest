@@ -30,5 +30,6 @@ public class problem08 extends Karel {
 		while(beepersInBag()){
 			putBeeper();
 		}
+		move();
 	}
 }

@@ -2,12 +2,12 @@ import stanford.karel.SuperKarel;
 
 public class fullworldoncircle extends SuperKarel {
 	public void run() {
-		while(frontIsClear()){
+		//while(frontIsClear()){
 			fillLinefromLeft();
 			goUp();
 			fillLinefromRight();
 			goDown();
-		}
+	//	}
 	
 	}
 	
@@ -20,10 +20,13 @@ public class fullworldoncircle extends SuperKarel {
 				putBeeper();
 				move();
 			} else {
-				break;
+				turnAround();
+				move();
+				turnRight();
 			}
+			break;
 		}
-		turnLeft();
+		
 	}
 	
 	private void goUp() {

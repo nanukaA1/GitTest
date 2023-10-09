@@ -23,7 +23,6 @@ public class fullworldoncircle extends SuperKarel {
 				break;
 			}
 		}
-		move();
 		turnLeft();
 	}
 	
@@ -36,7 +35,6 @@ public class fullworldoncircle extends SuperKarel {
 			} else {
 				break;
 			}
-			move();
 			turnLeft();
 		}
 		

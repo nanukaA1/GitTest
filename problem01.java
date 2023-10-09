@@ -1,4 +1,10 @@
 
-public class problem01 {
+public class problem01 extends Karel {
+	public void run() {
+		move();
+		move();
+		pickBeeper();
+		move();
+	}
 
 }

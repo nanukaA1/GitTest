@@ -23,9 +23,8 @@ public class fullworldoncircle extends SuperKarel {
 				break;
 			}
 		}
-		turnAround();
 		move();
-		turnRight();
+		turnLeft();
 	}
 	
 	private void goUp() {
@@ -37,9 +36,8 @@ public class fullworldoncircle extends SuperKarel {
 			} else {
 				break;
 			}
-			turnAround();
 			move();
-			turnRight();
+			turnLeft();
 		}
 		
 	}
@@ -54,9 +52,8 @@ public class fullworldoncircle extends SuperKarel {
 				break;
 			}
 		}
-		turnAround();
 		move();
-		turnRight();
+		turnLeft();
 	}
 	
 	private void goDown() {
@@ -69,9 +66,8 @@ public class fullworldoncircle extends SuperKarel {
 				break;
 			}
 		}
-		turnAround();
 		move();
-		turnRight();	
+		turnLeft();	
 	}
 }	
 	

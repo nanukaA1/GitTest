@@ -22,7 +22,7 @@ public class fullworldoncircle extends SuperKarel {
 			} else {
 				turnAround();
 				move();
-				turnRight();
+				turnAround();
 				break;
 			}
 			
@@ -31,6 +31,7 @@ public class fullworldoncircle extends SuperKarel {
 	}
 	
 	private void goUp() {
+		turnLeft();
 		while(frontIsClear()) {
 			if(noBeepersPresent()) {
 				putBeeper();

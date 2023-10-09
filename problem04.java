@@ -1,6 +1,6 @@
 import stanford.karel.SuperKarel;
 
-public class problem03 extends SuperKarel {
+public class problem04 extends SuperKarel {
 	public void run(){
 		putBeeper();
 		while(frontIsClear()){

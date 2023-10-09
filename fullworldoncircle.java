@@ -62,6 +62,7 @@ public class fullworldoncircle extends SuperKarel {
 				turnAround();
 				move();
 				turnAround();
+				break;
 			}
 		}
 		

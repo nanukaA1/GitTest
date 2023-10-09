@@ -12,9 +12,11 @@ public class problem06 extends Karel {
 		while (beepersPresent()) {
 			pickBeeper();
 			move();
+			move();
 			putBeeper();
 			turnLeft();
 			turnLeft();
+			move();
 			move();
 			turnLeft();
 			turnLeft();

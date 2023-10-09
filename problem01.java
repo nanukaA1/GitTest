@@ -6,6 +6,7 @@ public class problem01 extends Karel {
 		move();
 		pickBeeper();
 		move();
+		putBeeper();
 	}
 
 }

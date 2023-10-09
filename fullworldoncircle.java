@@ -59,12 +59,11 @@ public class fullworldoncircle extends SuperKarel {
 				putBeeper();
 				move();
 			} else {
-				turnAround();
-				move();
-				turnAround();
 				break;
 			}
 		}
+		turnAround();
+		move();
 		
 	}
 }	

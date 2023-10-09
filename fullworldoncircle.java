@@ -2,78 +2,36 @@ import stanford.karel.SuperKarel;
 
 public class fullworldoncircle extends SuperKarel {
 	public void run() {
-		//while(frontIsClear()){
-			fillLinefromLeft();
-			goUp();
-			fillLinefromRight();
-			goDown();
-	//	}
-	
-	}
-	
-	private void fillLinefromLeft() {
-//		if(facingSouth()){
-//			turnLeft();
-//		}
-		while(frontIsClear() && noBeepersPresent()) {
-			if(noBeepersPresent()) {
+		while (true) {
+			if (frontIsClear()) {
 				putBeeper();
 				move();
+				if (beepersPresent()) {
+					turnAround();
+					move();
+					turnRight();
+					move();
+					if (frontIsClear()) {
+						move();
+						if (beepersPresent()) {
+							turnAround();
+							move();
+							putBeeper();
+							turnRight();
+							move();
+							putBeeper();
+							break;
+						}
+						turnAround();
+						move();
+						turnAround();
+					}
+				}
 			} else {
-				turnAround();
-				move();
-				turnAround();
+				turnLeft();
 			}
-			
 		}
-		
 	}
-	
-	private void goUp() {
-		turnLeft();
-		while(frontIsClear() && noBeepersPresent()) {
-			if(noBeepersPresent()) {
-				putBeeper();
-				move();
-			} else {
-				turnAround();
-				move();
-				turnAround();
-			}
-			
-		}
-		
-	}
-	private void fillLinefromRight() {
-		turnLeft();
-		while(frontIsClear() &&  noBeepersPresent()) {
-			if(noBeepersPresent()) {
-				putBeeper();
-				move();
-			} else {
-				turnAround();
-				move();
-				turnAround();
-			}
-			
-		}
-		
-	}
-	
-	private void goDown() {
-		turnLeft();
-		while(frontIsClear() && noBeepersPresent()) {
-			if(noBeepersPresent()) {
-				putBeeper();
-				move();
-			} else {
-				turnAround();
-				move();
-				turnAround();
-			}
-			
-		}
-		
-	}
-}	
+
+}
 	

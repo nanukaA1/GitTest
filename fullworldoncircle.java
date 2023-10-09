@@ -12,9 +12,9 @@ public class fullworldoncircle extends SuperKarel {
 	}
 	
 	private void fillLinefromLeft() {
-		if(facingSouth()){
-			turnLeft();
-		}
+//		if(facingSouth()){
+//			turnLeft();
+//		}
 		while(frontIsClear()) {
 			if(noBeepersPresent()) {
 				putBeeper();

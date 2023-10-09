@@ -1,6 +1,6 @@
 import stanford.karel.Karel;
 
-public class problem08 extends Karel {
+public class problem08chemi extends Karel {
 	public void run() {
 		move();
 		move();

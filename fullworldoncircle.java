@@ -15,7 +15,7 @@ public class fullworldoncircle extends SuperKarel {
 //		if(facingSouth()){
 //			turnLeft();
 //		}
-		while(frontIsClear() & noBeepersPresent()) {
+		while(frontIsClear() && noBeepersPresent()) {
 			if(noBeepersPresent()) {
 				putBeeper();
 				move();
@@ -31,7 +31,7 @@ public class fullworldoncircle extends SuperKarel {
 	
 	private void goUp() {
 		turnLeft();
-		while(frontIsClear() & noBeepersPresent()) {
+		while(frontIsClear() && noBeepersPresent()) {
 			if(noBeepersPresent()) {
 				putBeeper();
 				move();
@@ -46,7 +46,7 @@ public class fullworldoncircle extends SuperKarel {
 	}
 	private void fillLinefromRight() {
 		turnLeft();
-		while(frontIsClear() & noBeepersPresent()) {
+		while(frontIsClear() &&  noBeepersPresent()) {
 			if(noBeepersPresent()) {
 				putBeeper();
 				move();
@@ -62,7 +62,7 @@ public class fullworldoncircle extends SuperKarel {
 	
 	private void goDown() {
 		turnLeft();
-		while(frontIsClear() & noBeepersPresent()) {
+		while(frontIsClear() && noBeepersPresent()) {
 			if(noBeepersPresent()) {
 				putBeeper();
 				move();

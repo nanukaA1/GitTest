@@ -12,9 +12,11 @@ public class assignment1_2 extends Karel{
 		}
 		turnLeft();
 		turnLeft();
-		while(noBeepersPresent()) {
-			putBeeper();
-			move();
+		while(frontIsClear()) {
+			if(noBeepersPresent()) {
+				putBeeper();
+				move();
+			}
 		}
 	}
 }

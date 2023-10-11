@@ -2,12 +2,20 @@ import stanford.karel.Karel;
 
 public class chessboard extends Karel{
 	public void run(){
-		putBeeper();
-		move();
-		while(frontIsClear()) {
-			move();
-			move();
+		while(frontIsClear()){
 			putBeeper();
+			while(frontIsClear()) {
+				move();
+				move();
+				putBeeper();
+			}
+			turnLeft();
+			turnLeft();
+			while(frontIsClear()) {
+				move();
+			}
+			turnLeft();
+			turnLeft();
 		}
 	}
 }

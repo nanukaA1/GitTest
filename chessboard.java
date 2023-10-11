@@ -9,13 +9,13 @@ public class chessboard extends Karel{
 				move();
 				putBeeper();
 			}
-			turnLeft();
-			turnLeft();
-			while(frontIsClear()) {
-				move();
-			}
-			turnLeft();
-			turnLeft();
-		}
-	}
+//			turnLeft();
+//			turnLeft();
+//			while(frontIsClear()) {
+//				move();
+//			}
+//			turnLeft();
+//			turnLeft();
+//		}
+	//}
 }

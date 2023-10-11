@@ -25,6 +25,13 @@ public class assignment1_2bla extends Karel{
 				move();
 				move();
 			}
-		}	
+		}
+		turnLeft();
+		while(frontIsClear()) {
+			if(noBeepersPresent()){
+				putBeeper();
+			}
+			move();
+		}
 	}
 }

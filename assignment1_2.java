@@ -9,6 +9,8 @@ public class assignment1_2 extends Karel{
 				turnLeft();
 				turnLeft();
 			}
+			turnLeft();
+			turnLeft();
 		}
 	}
 }

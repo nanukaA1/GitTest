@@ -33,6 +33,5 @@ public class assignment1 extends Karel{
 		turnLeft();
 		move();
 		turnLeft();
-		turnLeft();
 	}
 }

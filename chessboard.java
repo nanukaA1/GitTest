@@ -4,8 +4,12 @@ public class chessboard extends Karel{
 	 public void run() {
 		 putBeeper();
 		 move();
-		 while(frontIsClear()){
+		 while(frontIsClear()) {
 			 move();
-		     if 
+			 if(frontIsClear()) {
+				 putBeeper();
+				 move();
+			 }
+		 }
 	 }
 }	      

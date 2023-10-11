@@ -4,22 +4,35 @@ public class assignment1_2 extends Karel{
 	public void run() {
 		turnLeft();
 		while(frontIsClear()) {
-			move();
-			if(beepersPresent()) {
-				turnLeft();
-				turnLeft();
+			while(frontIsClear()) {
+				move();
+				if(beepersPresent()) {
+					turnLeft();
+					turnLeft();
+				}
 			}
-		}
-		turnLeft();
-		turnLeft();
-		while(frontIsClear()) {
+			turnLeft();
+			turnLeft();
+			while(frontIsClear()) {
+				if(noBeepersPresent()) {
+					putBeeper();
+				}
+				move();
+			}
 			if(noBeepersPresent()) {
 				putBeeper();
 			}
+			turnLeft();
+			turnLeft();
+			while(frontIsClear()) {
+				move();
+			}
+			turnLeft();
 			move();
-		}
-		if(noBeepersPresent()) {
-			putBeeper();
-		}
+			move();
+			move();
+			move();
+			turnLeft();
+		}	
 	}
 }

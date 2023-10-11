@@ -7,6 +7,7 @@ public class assignment1_2 extends Karel{
 			move();
 			if(beepersPresent()){
 				turnLeft();
+				turnLeft();
 			}
 		}
 	}

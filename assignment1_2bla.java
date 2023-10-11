@@ -39,5 +39,6 @@ public class assignment1_2bla extends Karel{
 		while(frontIsClear()) {
 			move();
 		}
+		turnLeft();
 	}
 }

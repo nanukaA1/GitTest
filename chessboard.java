@@ -2,7 +2,7 @@ import stanford.karel.Karel;
 
 public class chessboard extends Karel{
 	public void run(){
-		while(frontIsClear()){
+		//while(frontIsClear()){
 			putBeeper();
 			while(frontIsClear()) {
 				move();
@@ -17,5 +17,5 @@ public class chessboard extends Karel{
 //			turnLeft();
 //			turnLeft();
 //		}
-	//}
+	}
 }

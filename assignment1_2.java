@@ -2,8 +2,9 @@ import stanford.karel.Karel;
 
 public class assignment1_2 extends Karel{
 	public void run() {
-		turnLeft();
+		//turnLeft();
 		while(frontIsClear()) {
+			turnLeft();
 			while(frontIsClear()) {
 				move();
 				if(beepersPresent()) {

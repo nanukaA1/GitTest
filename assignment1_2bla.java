@@ -19,7 +19,7 @@ public class assignment1_2bla extends Karel{
 				move();
 			}
 			turnLeft();
-			while(frontIsClear()) {
+			if(frontIsClear()) {
 				move();
 				move();
 				move();

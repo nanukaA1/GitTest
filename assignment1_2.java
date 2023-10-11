@@ -18,5 +18,8 @@ public class assignment1_2 extends Karel{
 			}
 			move();
 		}
+		if(noBeepersPresent()) {
+			putBeeper();
+		}
 	}
 }

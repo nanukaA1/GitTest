@@ -8,9 +8,8 @@ public class assignment1_2 extends Karel{
 			if(beepersPresent()){
 				turnLeft();
 				turnLeft();
-				turnLeft();
 			}
-			
+			turnLeft();
 		}
 	}
 }

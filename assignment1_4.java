@@ -5,6 +5,26 @@ public class assignment1_4 extends SuperKarel {
 			putBeeper();
 			move();
 		}
+		putBeeper();
+		
+		turnLeft();
+		turnLeft();
+		while(beepersPresent()) {
+			pickBeepersAtEdge();
+		}
+		
+	}
+	
+	private void pickBeepersAtEdge() {
+		while(beepersPresent()){
+	         move();
+	    }
+		turnLeft();
+		turnLeft();
+		turnLeft();
+		move();
+	    pickBeeper();
+	    move();
 	}
 }
 ////Karel put the first and last beeper

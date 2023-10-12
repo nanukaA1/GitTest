@@ -3,19 +3,16 @@ import stanford.karel.*;
 public class BeepersWithOmittedCellKarel extends SuperKarel {
 
     public void run() {
-        while (frontIsClear()) {
-            putBeepersInRow();
-            move();
+        while (true) {
+            putBeeper();
             if (frontIsClear()) {
                 move();
+                if (frontIsClear()) {
+                    move();
+                }
+            } else {
+                break;
             }
-        }
-    }
-
-    private void putBeepersInRow() {
-        while (frontIsClear()) {
-            putBeeper();
-            move();
         }
     }
 }

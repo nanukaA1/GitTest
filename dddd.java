@@ -5,6 +5,9 @@ public class dddd extends Karel {
 		if(frontIsClear()) {
 			while(frontIsClear()) {
 				fillOddRow();
+				turnLeft();
+				turnLeft();
+				turnLeft();
 				if(frontIsClear()){
 					fillEvenRow();
 				}

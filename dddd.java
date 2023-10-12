@@ -8,6 +8,9 @@ public class dddd extends Karel {
 				if(frontIsClear()){
 					fillEvenRow();
 				}
+				turnLeft();
+				turnLeft();
+				turnLeft();
 			}
 		} else { 
 			turnLeft();
@@ -81,11 +84,11 @@ public class dddd extends Karel {
 		turnLeft();
 		if(frontIsClear()) {
 			move();
-		} else {
-			turnLeft();
-		}
-		turnLeft();
-		turnLeft();
-		turnLeft();
+		} //else {
+			//turnLeft();
+		//}
+//		turnLeft();
+//		turnLeft();
+//		turnLeft();
 	}
 }

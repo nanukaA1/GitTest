@@ -10,26 +10,13 @@ public class dddd extends Karel {
 				}
 			}
 		} else { 
-			turnLeft();
-			putBeeper();
-			if(frontIsClear()) {
-				move();
-			}
-			while(frontIsClear()) {
-				move();
-				if(frontIsClear()) {
-					putBeeper();
-					move();
-				}
-			}
+			fillVerticalLine();
 		}
 	}
 	
 	private void fillOddRow() {
 		putBeeper();
-		//if(frontIsClear()) {
-			move();
-		//}
+		move();
 		while(frontIsClear()) {
 			move();
 			if(frontIsClear()) {
@@ -85,5 +72,19 @@ public class dddd extends Karel {
 		turnLeft();
 		turnLeft();
 		turnLeft();
+	}
+	
+	private void fillVerticalLine() {
+		turnLeft();
+		putBeeper();
+		move();
+		while(frontIsClear()) {
+			move();
+			if(frontIsClear()) {
+				putBeeper();
+				move();
+			}
+		}
+		putBeeperInLastCellIfNumberOfCellsIsOdd();
 	}
 }

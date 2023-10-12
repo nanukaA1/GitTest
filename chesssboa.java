@@ -38,7 +38,6 @@ public class chesssboa extends Karel {
 					} else {
 						turnLeft();
 						turnLeft();
-						turnLeft();
 						move();
 					}
 					if(frontIsClear()) {

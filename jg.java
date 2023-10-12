@@ -9,7 +9,7 @@ public class jg extends Karel {
 		while(frontIsClear()) {
 			if(frontIsClear()) {
 				move();
-			}
+			}}
 	}
 	
 }

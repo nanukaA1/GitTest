@@ -25,20 +25,16 @@ public class dddd extends Karel {
 	}
 	
 	private void fillEvenRow() {
-		while(frontIsClear()) {
-			if(frontIsClear()) {
-				move();
-			}
-			while(frontIsClear()) {
-				move();
-				if(frontIsClear()) {
-					putBeeper();
-					move();
-				}
-			}
-		}
-	}	
-	
+		move();
+        while (frontIsClear()) {
+            putBeeper();
+            move();
+            if (frontIsClear()) {
+                move();
+            }
+        }
+    }
+		
 	private void putBeeperInLastCellIfNumberofCellsIsOdd() {
 		turnLeft();
 		turnLeft();

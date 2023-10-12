@@ -26,7 +26,6 @@ public class dddd extends Karel {
 	
 	private void fillEvenRow() {
 		while(frontIsClear()) {
-			putBeeper();
 			if(frontIsClear()) {
 				move();
 			}

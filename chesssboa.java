@@ -14,6 +14,7 @@ public class chesssboa extends Karel {
 						putBeeper();
 						move();
 					}
+					else {putBeeper()}
 				}
 				if(facingWest()) {
 					turnLeft();

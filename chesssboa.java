@@ -46,6 +46,6 @@ public class chesssboa extends Karel {
 //					move();
 //				}
 			//}
-		}
+		//}
 	}
 }

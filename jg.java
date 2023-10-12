@@ -2,14 +2,17 @@ import stanford.karel.Karel;
 
 public class jg extends Karel {
 	public void run() {
-		defineOddOrEven();
-	}
-	
-	private void defineOddOrEven() {
+		putBeeper();
+		if(frontIsClear()) {
+			move();
+		}
 		while(frontIsClear()) {
+			move();
 			if(frontIsClear()) {
+				putBeeper();
 				move();
-			}}
+			}
+		}
 	}
 	
 }

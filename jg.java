@@ -4,7 +4,9 @@ public class jg extends Karel {
 	public void run() {
 		while(frontIsClear()) {
 			move();
-			turnLeft();
+			if(frontIsClear()) {
+				turnLeft();
+			}
 		}
 		
 	}

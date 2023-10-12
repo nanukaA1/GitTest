@@ -6,6 +6,7 @@ public class chesssboa extends Karel {
 		//move();
 		while(frontIsClear()) {
 			move();
+			move();
 			if(frontIsClear()) {
 				putBeeper();
 				move();

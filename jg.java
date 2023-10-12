@@ -13,6 +13,9 @@ public class jg extends Karel {
 				move();
 			}
 		}
+		if(noBeepersPresent()){
+			putBeeper();
+		}
 	}
 	
 }

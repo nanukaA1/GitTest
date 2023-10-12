@@ -32,9 +32,11 @@ public class chesssboa extends Karel {
 				}
 			}
 		}
-		while(frontIsBlocked()) {
+		if(frontIsBlocked()) {
 			turnLeft();
-			move();
+			while(frontIsClear()) {
+				move();
+			}
 		}
 	}
 }

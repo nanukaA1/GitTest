@@ -19,5 +19,24 @@ public class dddd extends Karel {
 				}
 			}
 		}
+		putBeeperInLastCellIfNumberofCellsIsOdd();
+	}
+	
+	private void putBeeperInLastCellIfNumberofCellsIsOdd() {
+		turnLeft();
+		turnLeft();
+		move();
+		if(noBeepersPresent()) {
+			turnLeft();
+			turnLeft();
+			move();
+			putBeeper();
+			turnLeft();
+		} else {
+			turnLeft();
+			turnLeft();
+			move();
+			turnLeft();
+		}
 	}
 }

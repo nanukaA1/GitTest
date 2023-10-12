@@ -2,13 +2,29 @@ import stanford.karel.Karel;
 
 public class dddd extends Karel {
 	public void run() {
-		while(frontIsClear()) {
-			fillOddRow();
-			if(frontIsClear()){
-				fillEvenRow();
+		if(frontIsClear()) {
+			while(frontIsClear()) {
+				fillOddRow();
+				if(frontIsClear()){
+					fillEvenRow();
+				}
 			}
-		}	
+		} else { 
+			turnLeft();
+			putBeeper();
+			if(frontIsClear()) {
+				move();
+			}
+			while(frontIsClear()) {
+				move();
+				if(frontIsClear()) {
+					putBeeper();
+					move();
+				}
+			}
+		}
 	}
+	
 	private void fillOddRow() {
 		while(frontIsClear()) {
 			putBeeper();

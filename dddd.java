@@ -26,7 +26,6 @@ public class dddd extends Karel {
 	}
 	
 	private void fillOddRow() {
-		//while(frontIsClear()) {
 		putBeeper();
 		if(frontIsClear()) {
 			move();
@@ -35,10 +34,9 @@ public class dddd extends Karel {
 			move();
 			if(frontIsClear()) {
 				putBeeper();
-				move();
+				//move();
 			}
 		}
-		//}
 		putBeeperInLastCellIfNumberOfCellsIsOdd();
 		returnAndMoveUp();
 	}

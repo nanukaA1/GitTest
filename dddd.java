@@ -3,7 +3,7 @@ import stanford.karel.Karel;
 public class dddd extends Karel {
 	public void run() {
 		fillEvenRow();
-		//returnBackAndMoveUp();
+		returnAndMoveUp();
 	}
 	private void fillEvenRow() {
 		while(frontIsClear()) {
@@ -20,6 +20,7 @@ public class dddd extends Karel {
 			}
 		}
 		putBeeperInLastCellIfNumberofCellsIsOdd();
+		//returnAndMoveUp();
 	}
 	
 	private void putBeeperInLastCellIfNumberofCellsIsOdd() {
@@ -31,12 +32,21 @@ public class dddd extends Karel {
 			turnLeft();
 			move();
 			putBeeper();
-			turnLeft();
 		} else {
 			turnLeft();
 			turnLeft();
 			move();
-			turnLeft();
 		}
+	}
+	
+	private void returnAndMoveUp() {
+		turnLeft();
+		turnLeft();
+		while(frontIsClear()) {
+			move();
+		}
+		turnLeft();
+		turnLeft();
+		turnLeft();
 	}
 }

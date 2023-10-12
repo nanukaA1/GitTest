@@ -1,6 +1,6 @@
 import stanford.karel.Karel;
 
-public class dddd extends Karel {
+public class assignment1_3 extends Karel {
 	public void run() {
 		if(frontIsClear()) {
 			while(frontIsClear()) {

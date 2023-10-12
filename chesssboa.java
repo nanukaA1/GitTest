@@ -21,16 +21,20 @@ public class chesssboa extends Karel {
 			turnLeft();
 			if(frontIsClear()) {
 				move();
+				turnLeft();
+				turnLeft();
+				turnLeft();
 			}
-			turnLeft();
-			turnLeft();
-			turnLeft();
+			//turnLeft();
+			//turnLeft();
+			//turnLeft();
 		} else {
 			turnLeft();
 			if(frontIsClear()) {
 				move();
+				turnLeft();
 			}
-			turnLeft();
+			//turnLeft();
 		}
 	}
 	}

@@ -45,6 +45,7 @@ public class chesssboa extends Karel {
 					putBeeper();
 					move();
 				}
+			}
 		}
 	}
 }

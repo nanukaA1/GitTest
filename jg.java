@@ -12,6 +12,7 @@ public class jg extends Karel {
 				putBeeper();
 				//move();
 			}
+			move();
 		}
 		
 	}

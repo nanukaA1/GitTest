@@ -11,5 +11,13 @@ public class chessboard extends Karel{
 				 move();
 			 }
 		 }
+		 turnLeft();
+		 turnLeft();
+		 while(frontIsClear()) {
+			 move();
+		 }
+		 turnLeft();
+		 turnLeft();
+		 
 	 }
 }	      

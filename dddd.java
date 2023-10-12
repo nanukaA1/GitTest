@@ -62,10 +62,10 @@ public class dddd extends Karel {
 		move();
 		turnLeft();
 		turnLeft();
+		move();
 		if(noBeepersPresent()) {
 			putBeeper();
 		} 
-		move();
 	}
 	
 	private void returnAndMoveUp() {

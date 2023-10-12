@@ -4,7 +4,9 @@ public class dddd extends Karel {
 	public void run() {
 		while(frontIsClear()) {
 			fillOddRow();
-			if(frontIsClear()){fillEvenRow();}
+			if(frontIsClear()){
+				fillEvenRow();
+			}
 		}	
 	}
 	private void fillOddRow() {

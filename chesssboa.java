@@ -2,7 +2,7 @@ import stanford.karel.Karel;
 
 public class chesssboa extends Karel {
 	public void run() {
-		if(frontIsClear()) {
+		while(frontIsClear()) {
 			putBeeper();
 			if(frontIsClear()) {
 				move();
@@ -32,5 +32,6 @@ public class chesssboa extends Karel {
 				}
 			}
 		}
+		move();
 	}
 }

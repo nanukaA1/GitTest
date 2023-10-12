@@ -2,11 +2,10 @@ import stanford.karel.*;
 public class assignment1_4 extends SuperKarel {
 	public void run(){
 		while(frontIsClear()) {
-			//move();
-			putBeeper();
 			move();
+			putBeeper();
 		}
-		putBeeper();
+		//putBeeper();
 		
 		turnLeft();
 		turnLeft();

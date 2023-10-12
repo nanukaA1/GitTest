@@ -8,7 +8,7 @@ public class problem13 extends GraphicsProgram{
 	private static final double WINDOW_HEIGHT = 200;
 	
 	public void run() {
-		
+		drawHouse();
 	}
 	
 	private void drawHouse() {

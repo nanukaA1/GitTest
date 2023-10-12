@@ -86,5 +86,6 @@ public class dddd extends Karel {
 		}
 		turnLeft();
 		turnLeft();
+		turnLeft();
 	}
 }

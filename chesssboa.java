@@ -30,8 +30,7 @@ public class chesssboa extends Karel {
 					turnLeft();
 					move();
 					if(noBeepersPresent()) {
-						turnLeft();
-						//turnLeft();
+						doubleTurnLeft();
 						move();
 						putBeeper();
 					}
@@ -56,5 +55,9 @@ public class chesssboa extends Karel {
 //				}
 			//}
 		//}
+	}
+	private void doubleTurnLeft() {
+		turnLeft();
+		turnLeft();
 	}
 }

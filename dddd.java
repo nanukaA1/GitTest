@@ -33,6 +33,7 @@ public class dddd extends Karel {
                 move();
             }
         }
+        putBeeperInLastCellIfNumberofCellsIsOdd();
     }
 		
 	private void putBeeperInLastCellIfNumberofCellsIsOdd() {

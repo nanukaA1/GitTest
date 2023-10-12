@@ -1,5 +1,5 @@
-import acm.program.ConsoleProgram;
 
-public class JYYF extends ConsoleProgram {
+
+public class JYYF {
 
 }

@@ -6,21 +6,19 @@ public class assignment1_4 extends SuperKarel {
 			putBeeper();
 		}
 		pickBeeper();
-		
 		turnLeft();
 		turnLeft();
 		move();
 		while(beepersPresent()) {
-			pickBeepersAtEdge();
+			pickBeepersAtEdges();
 		}
 		turnLeft();
 		turnLeft();
-		
 		move();
 		putBeeper();
 	}
 	
-	private void pickBeepersAtEdge() {
+	private void pickBeepersAtEdges() {
 		while(beepersPresent()){
 	         move();
 	    }

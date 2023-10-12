@@ -1,7 +1,7 @@
 import stanford.karel.Karel;
-import stanford.karel.SuperKarel;
 
-public class chesssboa extends SuperKarel {
+
+public class chesssboa extends Karel {
 	public void run() {
 		//if(frontIsClear()) {
 			while(frontIsClear()) {
@@ -31,10 +31,9 @@ public class chesssboa extends SuperKarel {
 					turnLeft();
 					move();
 					if(noBeepersPresent()) {
-//						turnLeft();
-//						turnLeft();
-//						turnLeft();
-						turnAround();
+						turnLeft();
+						turnLeft();
+						turnLeft();
 						move();
 						putBeeper();
 					}

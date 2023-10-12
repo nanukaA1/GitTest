@@ -27,14 +27,14 @@ public class dddd extends Karel {
 	
 	private void fillOddRow() {
 		putBeeper();
-		if(frontIsClear()) {
+		//if(frontIsClear()) {
 			move();
-		}
+		//}
 		while(frontIsClear()) {
 			move();
 			if(frontIsClear()) {
 				putBeeper();
-				//move();
+				move();
 			}
 		}
 		putBeeperInLastCellIfNumberOfCellsIsOdd();

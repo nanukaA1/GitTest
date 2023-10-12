@@ -3,10 +3,6 @@ import stanford.karel.*;
 public class BeeperOmitKarel extends SuperKarel {
 
     public void run() {
-        while (frontIsClear()) {
-            placeBeepersOmitOne();
-            move();
-        }
         placeBeepersOmitOne();
     }
 
@@ -17,6 +13,18 @@ public class BeeperOmitKarel extends SuperKarel {
             if (frontIsClear()) {
                 move();
             }
+        }
+        
+        // Return to the starting position
+        turnAround();
+        while (frontIsClear()) {
+            move();
+        }
+        turnAround();
+        
+        if (frontIsClear()) {
+            move();
+            placeBeepersOmitOne();
         }
     }
 }

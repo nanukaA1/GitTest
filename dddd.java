@@ -65,7 +65,9 @@ public class dddd extends Karel {
 		turnLeft();
 		if(frontIsClear()) {
 			move();
-		} else {turnLeft();}
+		} else {
+			turnLeft();
+		}
 		turnLeft();
 		turnLeft();
 		turnLeft();

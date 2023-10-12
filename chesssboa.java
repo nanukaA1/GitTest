@@ -30,11 +30,11 @@ public class chesssboa extends Karel {
 					turnLeft();
 					move();
 					if(noBeepersPresent()) {
+						turnLeft();
+						turnLeft();
+						move();
 						putBeeper();
 					}
-					turnLeft();
-					turnLeft();
-					move();
 					turnLeft();
 					if(frontIsClear()) {
 						move();

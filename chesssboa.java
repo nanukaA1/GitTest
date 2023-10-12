@@ -34,14 +34,17 @@ public class chesssboa extends Karel {
 				}
 			} 
 		} else {
-			putBeeper();
 			turnLeft();
+			putBeeper();
+			if(frontIsClear()) {
+				move();
+			}
 			while(frontIsClear()) {
 				move();
 				if(frontIsClear()) {
 					putBeeper();
 					move();
-				}}
+				}
 		}
 	}
 }

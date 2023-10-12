@@ -9,10 +9,14 @@ public class assignment1_4 extends SuperKarel {
 		
 		turnLeft();
 		turnLeft();
-		//move();
+		move();
 		while(beepersPresent()) {
 			pickBeepersAtEdge();
 		}
+		turnLeft();
+		turnLeft();
+		turnLeft();
+		move();
 		putBeeper();
 	}
 	

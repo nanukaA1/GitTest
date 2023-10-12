@@ -32,7 +32,7 @@ public class problem13 extends GraphicsProgram{
 			if(i == 0) {
 				x = getWidth() /2 - HOUSE_WIDTH / 2 + WINDOW_WIDTH / 2;
 			} else {
-				x = getWidth() /2 + HOUSE_WIDTH /2 - WINDOW_WIDTH *3 / 2;
+				x = getWidth() /2 + HOUSE_WIDTH /2 - WINDOW_WIDTH * 3 / 2;
 			}
 			GRect window = new GRect(WINDOW_WIDTH, WINDOW_HEIGHT);
 			add(window, x, y);

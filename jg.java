@@ -10,12 +10,10 @@ public class jg extends Karel {
 			move();
 			if(frontIsClear()) {
 				putBeeper();
-				move();
+				//move();
 			}
 		}
-		if(noBeepersPresent()){
-			putBeeper();
-		}
+		
 	}
 	
 }

@@ -22,7 +22,6 @@ public class assignment1_4 extends SuperKarel {
 	    }
 		turnLeft();
 		turnLeft();
-		turnLeft();
 		move();
 	    pickBeeper();
 	    move();

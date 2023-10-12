@@ -2,9 +2,10 @@ import stanford.karel.Karel;
 
 public class dddd extends Karel {
 	public void run() {
-		fillOddRow();
-		returnAndMoveUp();
-		fillEvenRow();
+		while(frontIsClear()) {
+			fillOddRow();
+			fillEvenRow();
+		}	
 	}
 	private void fillOddRow() {
 		while(frontIsClear()) {
@@ -21,7 +22,7 @@ public class dddd extends Karel {
 			}
 		}
 		putBeeperInLastCellIfNumberofCellsIsOdd();
-		//returnAndMoveUp();
+		returnAndMoveUp();
 	}
 	
 	private void fillEvenRow() {
@@ -34,6 +35,7 @@ public class dddd extends Karel {
             }
         }
         putBeeperInLastCellIfNumberofCellsIsOdd();
+        returnAndMoveUp();
     }
 		
 	private void putBeeperInLastCellIfNumberofCellsIsOdd() {

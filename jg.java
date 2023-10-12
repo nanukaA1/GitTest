@@ -8,7 +8,7 @@ public class jg extends Karel {
 	private void defineOddOrEven() {
 		while(frontIsClear()) {
 			if(frontIsClear()) {
-				move;
+				move();
 			}
 	}
 	

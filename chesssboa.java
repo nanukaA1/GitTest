@@ -15,7 +15,7 @@ public class chesssboa extends Karel {
 				move();
 			}
 		}
-		if(facingEast()) {
+		if(facingWest()) {
 			turnLeft();
 			turnLeft();
 			turnLeft();

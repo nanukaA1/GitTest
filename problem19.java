@@ -5,7 +5,7 @@ public class problem19 extends ConsoleProgram{
 		int a = readInt("enter number: ");
 		
 		for(int i =0; i < a; i++) {
-			println("hello" + i);
+			println("hello " + i);
 		}
 	}
 

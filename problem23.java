@@ -13,9 +13,7 @@ public class problem23 extends ConsoleProgram{
 		for(int i = 1; i <= num; i++) {
 			sum += num;
 		}
-		return 0;
+		return sum;
 	}
 	
-	
-
 }

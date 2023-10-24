@@ -3,9 +3,8 @@ import acm.program.ConsoleProgram;
 public class problem24 extends ConsoleProgram {
 	public void run() {
 		int a = readInt();
-		int b = readInt();
 		
-		int x = calculateSum();
+		int x = calculateSum(a);
 		println("count is " + x );
 	}
 

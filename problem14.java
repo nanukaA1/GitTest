@@ -7,8 +7,8 @@ public class problem14 extends GraphicsProgram {
 	private static final int WIDTH = 200;
 	private static final int HEIGHT = 300;
 
-	private static final int EYE_WIDTH = 40;
-	private static final int EYE_HEIGHT = 60;
+	private static final int EYE_WIDTH = 70;
+	private static final int EYE_HEIGHT = 40;
 	
 	private static final int MOUTH_WIDTH = 100;
 	private static final int MOUTH_HEIGHT = 40;

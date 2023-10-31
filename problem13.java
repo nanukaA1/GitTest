@@ -1,42 +1,17 @@
-import acm.graphics.GRect;
+import acm.graphics.GLine;
 import acm.program.GraphicsProgram;
 
 public class problem13 extends GraphicsProgram{
-	private static final double HOUSE_WIDTH = 200;
-	private static final double HOUSE_HEIGHT = 200;
-	private static final double WINDOW_WIDTH = 20;
-	private static final double WINDOW_HEIGHT = 20;
-	
 	public void run() {
-		drawHouse();
+		drawLine();
 	}
 	
-	private void drawHouse() {
-		drawWall();
-		drawWindows();
-		//drawRoof();
-		//drawDoor();
+	private void drawLine() {
+		double x1 = 0;
+		double y1 = getHeight() / 2;
+		double x2 = getWidth();
+		double y2 = y1;
+		GLine line = new GLine(x1, y1, x2, y2);
+		add(line);
 	}
-	
-	private void drawWall() {
-		GRect wall = new GRect(HOUSE_WIDTH, HOUSE_HEIGHT);
-		double x = getWidth() /2 - HOUSE_WIDTH;
-		double y = getHeight() - HOUSE_HEIGHT;
-		add(wall, x, y);
-	}
-	
-	private void drawWindows() {
-		for(int i = 0; i<2; i++) {
-			double x;
-			int y = (int) (getHeight() - HOUSE_HEIGHT + (int) (WINDOW_HEIGHT / 2));
-			if(i == 0) {
-				x = getWidth() /2 - HOUSE_WIDTH / 2 + WINDOW_WIDTH / 2;
-			} else {
-				x = getWidth() /2 + HOUSE_WIDTH /2 - WINDOW_WIDTH * 3 / 2;
-			}
-			GRect window = new GRect(WINDOW_WIDTH, WINDOW_HEIGHT);
-			add(window, x, y);
-		}
-	}
-
 }

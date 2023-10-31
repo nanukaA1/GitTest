@@ -1,75 +1,70 @@
+import java.awt.Color;
 import acm.graphics.*;
-import acm.program.GraphicsProgram;
+import acm.program.*;
 
-//12. გრაფიკული პროგრამის გამოყენებით დახატეთ სახლი. (მიწაზე, ფანჯრის ცენტრში)
-public class problem12 extends GraphicsProgram{
-	// constants
-	private static final double HOUSE_WIDTH = 201;
-	private static final double HOUSE_HEIGHT = 300;
-	private static final double DOOR_WIDTH = 60;
-	private static final double DOOR_HEIGHT = 100;
-	private static final double ROOF_HEIGHT = 100;
-	private static final double WINDOW_WIDTH = 40;
-	private static final double WINDOW_HEIGHT = 60;
-	
+//12. გრაფიკული პროგრამის გამოყენებით დახატეთ სახლი. (ფერადი, სახურავიც)
+public class problem12 extends GraphicsProgram {
+
 	public void run() {
-		drawHouse();
-	}
-
-	private void drawHouse() {
 		drawWall();
-		drawRoof();
 		drawDoor();
-		drawWindows();
-	}
-	
-	private void drawWall() {
-		GRect wall = new GRect(HOUSE_WIDTH, HOUSE_HEIGHT);
-		double x =  (getWidth() / 2 - HOUSE_WIDTH / 2);
-		double y = getHeight() - HOUSE_HEIGHT;
-		add(wall, x, y);
+		drawWindow();
+		drawRoof();
 	}
 
-	private void drawRoof() {
-		double x1 = getWidth() / 2 - HOUSE_WIDTH / 2;
-		double y1 = getHeight() - HOUSE_HEIGHT;
-		double x2 = x1 + HOUSE_WIDTH / 2;
-		double y2 = y1 - ROOF_HEIGHT;
-		
-		GLine leftRoof = new GLine(x1, y1, x2, y2);
-		add(leftRoof);
-	
-		x1 = x2;
-		y1 = y2;
-		x2 = x1 + HOUSE_WIDTH / 2;
-		y2 = y1 + ROOF_HEIGHT;
-		
-		GLine rightRoof = new GLine(x1, y1, x2, y2);
-		add(rightRoof);
+	private void drawWall() {
+		int width = 180;
+		int height = 220;
+		int padding = 40;
+		int x = (getWidth() - width)/ 2 ;
+		int y = (getHeight() - height) - padding;
+		GRect wall = new GRect(width, height);
+		wall.setFilled(true);
+		wall.setColor(Color.LIGHT_GRAY);
+		add(wall, x, y);
 	}
 	
 	private void drawDoor() {
-		GRect door = new GRect(DOOR_WIDTH, DOOR_HEIGHT);
-		int x = (int) (getWidth() / 2 - DOOR_WIDTH / 2);
-		double y = getHeight() - DOOR_HEIGHT;
+		int width = 70;
+		int height = 90;
+		int padding = 40;
+		int x = (getWidth() - width)/ 2 ;
+		int y = (getHeight() - height) - padding;
+		GRect door = new GRect(width, height);
+		door.setFilled(true);
+		door.setColor(Color.BLACK);
 		add(door, x, y);
 	}
-
-	private void drawWindows() {
-		for (int i = 0; i < 2; i++) {
-//			we would need casts if we used ints instead of doubles
-//			int y = (int) (getHeight() - HOUSE_HEIGHT) + (int) (WINDOW_HEIGHT / 2);
-			double y = getHeight() - HOUSE_HEIGHT + WINDOW_HEIGHT / 2;
-			double x;
-			if(i == 0) {
-				x = getWidth() / 2 - HOUSE_WIDTH / 2 + WINDOW_WIDTH / 2;
-			}else {
-				x = getWidth() / 2 + HOUSE_WIDTH / 2 - WINDOW_WIDTH * 3 / 2;
-			}
-			
-			GRect window = new GRect(WINDOW_WIDTH, WINDOW_HEIGHT);
-			add(window, x, y);
-		}
+	
+	private void drawWindow() {
+		int width = 50;
+		int height = 70;
+		int x = getWidth() / 2 + width / 2;
+		int y = getHeight() - 220;
+		GRect window = new GRect(width, height);
+		window.setFilled(true);
+		window.setColor(Color.RED);
+		add(window, x, y);
 	}
+	
+	private void drawRoof() {
+		// x, y, width same as the wall
+		int width = 180;
+		int height = 220;
+		int padding = 40;
+		int x = (getWidth() - width)/ 2 ;
+		int y = (getHeight() - height) - padding;
 
+		// we use GPolygon object for the roof 
+		// our polygon(triangle) needs 3 points for the vertices
+		// alternatively you can use 2 GLines
+		GPoint[] points = { 
+				new GPoint(x, y), 
+				new GPoint(x + width, y), 
+				new GPoint(x + width / 2, y - 60) };
+		GPolygon roof = new GPolygon(points);
+		roof.setFilled(true);
+		roof.setColor(Color.ORANGE);
+		add(roof);
+	}
 }

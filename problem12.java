@@ -4,7 +4,7 @@ import acm.program.GraphicsProgram;
 //12. გრაფიკული პროგრამის გამოყენებით დახატეთ სახლი. (მიწაზე, ფანჯრის ცენტრში)
 public class problem12 extends GraphicsProgram{
 	// constants
-	private static final double HOUSE_WIDTH = 200;
+	private static final double HOUSE_WIDTH = 201;
 	private static final double HOUSE_HEIGHT = 300;
 	private static final double DOOR_WIDTH = 60;
 	private static final double DOOR_HEIGHT = 100;

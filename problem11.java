@@ -1,4 +1,4 @@
-import stanford.karel.SuperKarel;
+import stanford.karel.*;
 
 public class problem11 extends SuperKarel {
 
@@ -10,7 +10,7 @@ public class problem11 extends SuperKarel {
 
     // Check if Karel is at the upper right corner
     private boolean atUpperRightCorner() {
-        return frontIsBlocked() && rightIsBlocked();
+        return frontIsBlocked() && rightBlocked();
     }
 
     // Move along the wall until reaching the upper right corner
@@ -22,13 +22,11 @@ public class problem11 extends SuperKarel {
         }
     }
 
-    // Check if there is a wall in front of Karel
-    private boolean frontIsBlocked() {
-        return !frontIsClear();
-    }
+ 
+   
 
     // Check if there is a wall to the right of Karel
-    private boolean rightIsBlocked() {
+    private boolean rightBlocked() {
         turnRight();
         boolean isBlocked = frontIsBlocked();
         turnLeft(); // Turn back to the original direction

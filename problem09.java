@@ -9,8 +9,7 @@ public class problem09 extends Karel {
 			transferBeepers();
 		}
 	}
-	
-	// transfers beepers from third to fourth
+
 	private void transferBeepers() {
 		addBeepers();
 		moveTwice();
@@ -22,7 +21,6 @@ public class problem09 extends Karel {
 		turnAround();
 	}
 	
-	// adds beepers from third to fourth and fifth
 	private void addBeepers() {
 		while (beepersPresent()) {
 			pickBeeper();
@@ -36,7 +34,6 @@ public class problem09 extends Karel {
 		}
 	}
 	
-	// returns beepers from fifth to third
 	private void returnBeepers() {
 		while (beepersPresent()) {
 			pickBeeper();

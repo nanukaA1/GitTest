@@ -27,7 +27,6 @@ public class problem10 extends SuperKarel{
 		turnAround();
 	}
 	
-
 	private void backupBeeper() {
 		turnLeft();
 		move();
@@ -36,24 +35,13 @@ public class problem10 extends SuperKarel{
 		move();
 		turnLeft();
 	}
-	
-	
-	//private void putBeeperTwoCellsAway() {
-//		move();
-//		move();
-//		putBeeper();
-//		moveBack();
-//		moveBack();
-//	}
 
-	
 	private void putBeeperOneCellAway() {
 		move();
 		putBeeper();
 		moveBack();
 	}
 
-	
 	private void restoreBeepers() {
 		turnLeft();
 		move();

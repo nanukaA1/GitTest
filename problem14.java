@@ -18,6 +18,8 @@ public class problem14 extends GraphicsProgram {
 		drawLeftEye();
 		drawRightEye();
 		drawMouth();
+		GLabel x = new GLabel(CENTER, 20,20);
+		add(x);
 	}
 
 	private void drawFace() {

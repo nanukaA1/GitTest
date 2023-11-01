@@ -15,7 +15,7 @@ public class problem17 extends ConsoleProgram{
 		BigDecimal decimal = new BigDecimal(aAsString);
 		
 		int integerPart = decimal.intValue();
-		BigDecimal franctionPart = decimal.remainder(BigDecimal.TEN);
+		BigDecimal franctionPart = decimal.remainder(BigDecimal.ONE);
 		
 		println("Integer part: " + integerPart);
 		println("Franction part: " + franctionPart);

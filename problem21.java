@@ -2,7 +2,7 @@ import acm.graphics.*;
 import acm.program.GraphicsProgram;
 
 public class problem21 extends GraphicsProgram{
-	private static final int NUM_LINES = 12;
+	private static final int NUM_LINES = 9;
 	public void run() {
 		for(int i = 0; i < NUM_LINES; i++) {
 			addVerticalLine(i);

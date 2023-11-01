@@ -3,7 +3,8 @@ import acm.program.GraphicsProgram;
 public class problem29 extends GraphicsProgram{
 	public void run() {
 		int n = readInt("enter n: ");
-		println(nthFibonacciNum(n));
+		int fib = nthFibonacciNum(n)
+		println(fib);
 	}
 	
 	private int nthFibonacciNum(int n) {

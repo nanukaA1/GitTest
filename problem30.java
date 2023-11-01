@@ -9,9 +9,8 @@ public class problem30 extends ConsoleProgram{
 	private String reverse(int n) {
 		String reversedNum = "";
 		while(n != 0) {
-			int lastDigit = n % 10;
+			reversedNum += n % 10;
 			n /= 10; 
-			reversedNum += lastDigit;
 		}
 		return reversedNum;
 		

@@ -4,7 +4,6 @@ import acm.program.GraphicsProgram;
 public class problem22 extends GraphicsProgram{
 	private static final int NUM_CELLS = 8;
 	public void run() {
-		// length of the side of a square
 		double length = Math.min(getWidth(), getHeight()) / (double)NUM_CELLS;
 		for(int i = 0; i < NUM_CELLS; i++) {
 			for (int j = 0; j < NUM_CELLS; j++) {

@@ -10,7 +10,6 @@ public class problem21 extends GraphicsProgram{
 		}
 	}
 	
-//	y = 0 , height , height + height ....
 	private void addHorisontalLine(int i) {
 		double height = (double)getHeight() / (NUM_LINES - 1);
 		double y = i * height;

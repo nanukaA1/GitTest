@@ -18,13 +18,13 @@ public class problem29 extends ConsoleProgram {
 		int a = 0;
 		int b = 1;
 		
-		int curr = 0;
+		int x = -1;
 		for (int i = 2; i <= n; i++) {
-			curr = b + a;
+			x = b + a;
 			a = b;
-			b = curr;
+			b = x;
 		}
 		
-		return curr;
+		return x;
 	}
 }

@@ -13,7 +13,7 @@ public class problem28 extends ConsoleProgram {
 			if(x % 2 == 0) {
 				countOfEven += 1;
 			}
-			while(x < 0) {
+			if(x < 0) {
 				println("n must be positive");
 				x = readInt("Enter n: ");
 			}

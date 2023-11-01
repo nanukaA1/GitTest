@@ -8,7 +8,7 @@ public class problem15 extends ConsoleProgram{
 		}
 	
 	private void calculateAverage(int x, int y) {
-		double average = (x + y) / 2;
+		double average = (x + y) / 2.0;
 		println(average);
 	}
 }

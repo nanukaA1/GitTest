@@ -11,7 +11,7 @@ public class problem23 extends ConsoleProgram{
 	private int calculateSum(int num) {
 		int sum = 0;
 		for(int i = 1; i <= num; i++) {
-			sum += num;
+			sum += i;
 		}
 		return sum;
 	}

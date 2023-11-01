@@ -5,7 +5,7 @@ public class problem22 extends GraphicsProgram{
 	private static final int NUM_CELLS = 8;
 	public void run() {
 		double length = Math.min(getWidth(), getHeight()) / (double)NUM_CELLS;
-		for(int i = 0; i < NUM_CELLS-6; i++) {
+		for(int i = 0; i < NUM_CELLS; i++) {
 			for (int j = 0; j < NUM_CELLS; j++) {
 				double x = i * length;
 				double y = j * length; 

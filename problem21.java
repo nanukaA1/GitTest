@@ -12,7 +12,7 @@ public class problem21 extends GraphicsProgram{
 	
 //	y = 0 , height , height + height ....
 	private void addHorisontalLine(int i) {
-		double height = (double)getHeight() / (NUM_LINES);
+		double height = (double)getHeight() / (NUM_LINES - 1);
 		double y = i * height;
 		double x1 = 0;
 		double x2 = getWidth();
@@ -22,7 +22,7 @@ public class problem21 extends GraphicsProgram{
 	}
 	
 	private void addVerticalLine(int i) {
-		double width = (double)getWidth() / (NUM_LINES);
+		double width = (double)getWidth() / (NUM_LINES - 1);
 		double x = i * width;
 		double y1 = 0;
 		double y2 = getHeight();

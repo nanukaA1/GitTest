@@ -20,6 +20,7 @@ public class problem29 extends GraphicsProgram{
 			a = b;
 			b = x;
 		}
+		return x;
 	}
 
 }

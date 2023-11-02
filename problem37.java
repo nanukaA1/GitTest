@@ -9,12 +9,10 @@ public class problem37 extends ConsoleProgram {
 		
 		println(rouletteNum);
 		while(userNum != rouletteNum){
-		if(userNum == rouletteNum) {
-			println("you win"); 
-			break;
-		} else {
 			println("you lose");
-		}}
+			userNum = readInt("enter your number here: ");
+		}
+		
 	}
 	
 	private int randomGeneratedNumFrom0To36() {

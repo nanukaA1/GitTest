@@ -9,7 +9,7 @@ public class problem33 extends GraphicsProgram {
 	private static final int MIN_RADIUS = 10;
 	private static final int MAX_RADIUS = 30;
 	public void run() {
-		for(int i = 0; i <400; i++) {
+		for(int i = 0; i <100; i++) {
 			addRandomCircle();
 		}
 	}

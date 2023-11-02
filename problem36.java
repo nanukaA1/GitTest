@@ -21,7 +21,7 @@ public class problem36 extends ConsoleProgram {
 		//double x = 1 / 8;
 		while(true) {
 			numFlips += 1;
-			boolean isHeads = rgen.nextBoolean(1.125); 
+			boolean isHeads = rgen.nextBoolean(0.125); 
 			if(isHeads) {
 				break;
 			}

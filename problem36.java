@@ -14,7 +14,7 @@ public class problem36 extends ConsoleProgram {
 		}
 		double avgFlips = sumOfFlips / NUM_EXPERIMENTS;
 		println("avg number of flips: " + avgFlips);
-		double x = 1 /8;
+		double x = 1 /8.0;
 		println(x);
 	}
 	

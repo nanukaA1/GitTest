@@ -14,7 +14,6 @@ public class problem36 extends ConsoleProgram {
 		}
 		double avgFlips = sumOfFlips / NUM_EXPERIMENTS;
 		println("avg number of flips: " + avgFlips);
-		double x = 1 /8.0;
 		println(x);
 	}
 	
@@ -23,7 +22,7 @@ public class problem36 extends ConsoleProgram {
 		//double x = 1 / 8;
 		while(true) {
 			numFlips += 1;
-			boolean isHeads = rgen.nextBoolean(); 
+			boolean isHeads = rgen.nextBoolean(1.125); 
 			if(isHeads) {
 				break;
 			}

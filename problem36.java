@@ -17,17 +17,14 @@ public class problem36 extends ConsoleProgram {
 	}
 	
 	private int holdExperiment() {
-//		int numFlips = 0;
-//		while(true) {
-//			numFlips += 1;
-//			boolean isHeads = rgen.nextBoolean(0.125); 
-//			if(isHeads) {
-//				break;
-//			}
-//		}
-//		return numFlips;
 		int numFlips = 0;
-		
-		
+		while(true) {
+			numFlips += 1;
+			boolean isHeads = rgen.nextBoolean(0.25); 
+			if(isHeads) {
+				break;
+			}
+		}
+		return numFlips;
 	}
 }

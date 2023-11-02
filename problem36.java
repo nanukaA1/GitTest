@@ -14,14 +14,16 @@ public class problem36 extends ConsoleProgram {
 		}
 		double avgFlips = sumOfFlips / NUM_EXPERIMENTS;
 		println("avg number of flips: " + avgFlips);
+		double x = 1 /8;
+		println(x);
 	}
 	
 	private int holdExperiment() {
 		int numFlips = 0;
-		double x = 1 / 8;
+		//double x = 1 / 8;
 		while(true) {
 			numFlips += 1;
-			boolean isHeads = rgen.nextBoolean(x); //თუ ყალბი მონეტაა და ვთქვათ ალბათობა 9 მაშინ 0.1-ს ჩავწერდით
+			boolean isHeads = rgen.nextBoolean(); 
 			if(isHeads) {
 				break;
 			}

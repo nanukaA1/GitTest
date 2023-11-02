@@ -10,7 +10,7 @@ public class problem37 extends ConsoleProgram {
 		println(rouletteNum);
 		
 		if(userNum == rouletteNum) {
-			println("you win") 
+			println("you win"); 
 		} else {
 			println("you lose");
 		}

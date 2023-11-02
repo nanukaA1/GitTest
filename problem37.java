@@ -7,8 +7,8 @@ public class problem37 extends ConsoleProgram {
 		int userNum = readInt("enter your number here: ");
 		int rouletteNum = randomGeneratedNumFrom0To36();
 		
-		println(rouletteNum);
 		while(userNum != rouletteNum){
+			println(rouletteNum);
 			println("you lose");
 			userNum = readInt("enter your number here: ");
 		}

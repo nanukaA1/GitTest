@@ -18,7 +18,6 @@ public class problem36 extends ConsoleProgram {
 	
 	private int holdExperiment() {
 		int numFlips = 0;
-		//double x = 1 / 8;
 		while(true) {
 			numFlips += 1;
 			boolean isHeads = rgen.nextBoolean(0.125); 

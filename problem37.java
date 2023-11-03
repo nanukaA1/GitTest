@@ -5,17 +5,14 @@ public class problem37 extends ConsoleProgram {
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	public void run() {
 		int userNum = readInt("enter your number here: ");
-		int rouletteNum = randomGeneratedNumFrom0To36();
+		int rouletteNum = rgen.nextInt(36);
 		
-		while(userNum != rouletteNum){
-			println(rouletteNum);
+		println(rouletteNum);
+		
+		if(userNum == rouletteNum) {
+			println("you win"); 
+		} else {
 			println("you lose");
-			userNum = readInt("enter your number here: ");
 		}
-		
-	}
-	
-	private int randomGeneratedNumFrom0To36() {
-		return rgen.nextInt(36);
 	}
 }

@@ -21,7 +21,7 @@ public class dvv extends GraphicsProgram {
     }
     private void drawProgramBox() {
         int x = getWidth()/2 - Width/2; //finds center width and moves to starting point
-        int y = getHeight()/2 - Height/2; //finds center height and moves to starting point
+        int y = getHeight()/2 - Height*2; //finds center height and moves to starting point
         GRect drawBox = new GRect (x, y, Width, Height);  
         add(drawBox); //adds the Program box
         GLabel program = new GLabel("Program", x, y);

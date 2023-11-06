@@ -18,8 +18,8 @@ public class problem38 extends ConsoleProgram{
 		while(balance > 0) {
 			int userBet = readInt("enter your bet here: ");
 			int userNum = readInt("enter the number you want to bet on: ");
-			if(userBet > balance) {
-				println("you exceed the money on your balance, try again");
+			if(userBet > balance || userNum > 32) {
+				println("something's wrong, try again");
 			}
 			else {
 				println(rgen.nextInt(0,36));

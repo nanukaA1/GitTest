@@ -1,20 +1,21 @@
 import acm.program.ConsoleProgram;
 import acm.util.RandomGenerator;
-
+//თქვენი ამოცანაა გააკეთოთ მონეტის აგდების სიმულაციები და დათვალოთ საშუალოდ
+//რამდენჯერ უნდა ავაგდოთ მონეტა რათა 3-ჯერ ზედიზედ ამოვიდეს ბორჯღალო.
 public class problem36 extends ConsoleProgram {
-	private static final int NUM_EXPERIMENTS = 1000000;
+	private static final int NUM_EXPERIMENTS = 10000;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
-
+	
 	public void run() {
-		double sumFlips = 0;
-		for (int i = 0; i < NUM_EXPERIMENTS; i++) {
-			int currFlips = holdExperiment(); // result of 1 experiment
-			sumFlips += currFlips;
+		double sumOfFlips = 0;
+		for(int i = 0; i < NUM_EXPERIMENTS; i++) {
+			int currNumFlips = holdExperiment();
+			sumOfFlips += currNumFlips;
 		}
-		double avgFlips = sumFlips / NUM_EXPERIMENTS;
-		println("Avg number of flips is: " + avgFlips);
+		double avgFlips = sumOfFlips / NUM_EXPERIMENTS;
+		println("avg number of flips: " + avgFlips);
 	}
-
+	
 	private int holdExperiment() {
 		int numFlips = 0;
 		int numConsecutiveHeads = 0;
@@ -33,4 +34,3 @@ public class problem36 extends ConsoleProgram {
 		return numFlips;
 	}
 }
-

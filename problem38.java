@@ -13,21 +13,21 @@ import acm.util.RandomGenerator;
 public class problem38 extends ConsoleProgram{ 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	public void run() {
-		int money = 1000;
+		int balance = 1000;
 		
-		while(money > 0) {
+		while(balance > 0) {
 			int userBet = readInt("enter your bet here: ");
 			int userNum = readInt("enter the number you want to bet on: ");
-			if(userBet > money) {
-				println("you exceed the money on your balance: ");
+			if(userBet > balance) {
+				println("you exceed the money on your balance, try again");
 			}
 			else {
 				println(rgen.nextInt(0,36));
 				if(userNum == rgen.nextInt(0,36)) {
 					println("you win");
-					money += userBet;
+					balance += userBet;
 					println("amount of money won: " + userBet);
-					println("your balance: " + money);
+					println("your balance: " + balance);
 				}
 				else {
 					println("you lose");

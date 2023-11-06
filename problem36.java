@@ -33,4 +33,4 @@ public class problem36 extends ConsoleProgram {
 		return numFlips;
 	}
 }
-}
+

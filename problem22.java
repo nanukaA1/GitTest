@@ -20,5 +20,6 @@ public class problem22 extends GraphicsProgram{
 		GRect square = new GRect(length, length);
 		square.setFilled(isFilled);
 		add(square, x, y);
+		
 	}
 }

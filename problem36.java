@@ -18,11 +18,17 @@ public class problem36 extends ConsoleProgram {
 	
 	private int holdExperiment() {
 		int numFlips = 0;
-		while(true) {
+		int numConsecutiveHeads = 0;
+		while (true) {
 			numFlips += 1;
-			boolean isHeads = rgen.nextBoolean(); 
-			if(isHeads) {
-				break;
+			boolean isHeads = rgen.nextBoolean(0.4);
+			if (isHeads) {
+				numConsecutiveHeads += 1;
+				if (numConsecutiveHeads == 3) {
+					break;
+				}
+			} else {
+				numConsecutiveHeads = 0;
 			}
 		}
 		return numFlips;

@@ -31,9 +31,9 @@ public class problem38 extends ConsoleProgram{
 				}
 				else {
 					println("you lose");
-					money -= userBet;
+					balance -= userBet;
 					println("amount of money: " + userBet);
-					println("your balance: " + money);
+					println("your balance: " + balance);
 				}
 			}
 			

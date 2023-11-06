@@ -8,7 +8,7 @@ public class dvv extends GraphicsProgram {
     private static final int Width = 150;
  
     // height of each box in the picture
-    private static final int Height = 60;
+    private static final int Height = 90;
  
     public void run() {
         drawProgramBox();

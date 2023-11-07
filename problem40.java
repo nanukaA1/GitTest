@@ -11,14 +11,19 @@ public class problem40 extends GraphicsProgram {
 	public void run() {
 		GOval ball = new GOval(RADIUS, RADIUS);
 		add(ball, 0, getHeight() / 2);
-		//int vx = 5;
-		//int vy = 0;
-		while (ball.getX() <= getWidth() - 20 || ball.getX() >= 0 ) {
-			int vx = 5;
-			int vy = 0;
-			ball.move(vx, vy);
-			pause(PAUSETIME);
-			vx = -vx;
+		int vx = 5;
+		int vy = 0;
+		while (true) {
+			
+			if(ball.getX() <= getWidth() - RADIUS){
+				ball.move(vx, vy);
+				pause(PAUSETIME);
+			} else {
+				vx *= -1;
+				ball.move(vx, vy);
+				pause(PAUSETIME);
+			}
+			
 		}
 	}
 }

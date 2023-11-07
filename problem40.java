@@ -13,7 +13,7 @@ public class problem40 extends GraphicsProgram {
 		add(ball, 0, getHeight() / 2);
 		//int vx = 5;
 		//int vy = 0;
-		while (ball.getX() <= getWidth() - 20) {
+		while (ball.getX() <= getWidth() - 20 || ball.getX() >= 0 ) {
 			int vx = 5;
 			int vy = 0;
 			ball.move(vx, vy);

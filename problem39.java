@@ -13,6 +13,7 @@ public class problem39 extends GraphicsProgram {
 		myRect.setColor(Color.RED);
 		pause(PAUSETIME);
 		myRect.setColor(Color.GREEN);
+		myRect.setLocation(200, 250);
 		
 	}
 }

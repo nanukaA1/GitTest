@@ -11,5 +11,6 @@ public class problem39 extends GraphicsProgram {
 		add(ball, 0, getHeight()/ 2);
 		pause(PAUSETIME);
 		ball.move(getWidth()- 20, 0);
+		pause(PAUSETIME);
 	}
 }

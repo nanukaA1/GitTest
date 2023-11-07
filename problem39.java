@@ -10,8 +10,8 @@ public class problem39 extends GraphicsProgram {
 		GOval ball = new GOval(20, 20);
 		add(ball, 0, getHeight()/ 2);
 		
-		while(ball.getX() <= getWidth() - 20);
+		while(ball.getX() <= getWidth() - 1);
 		ball.move(1, 0);
-		//pause(PAUSETIME);
+		pause(PAUSETIME);
 	}
 }

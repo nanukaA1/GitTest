@@ -18,8 +18,8 @@ public class problem40 extends GraphicsProgram {
 			if(ball.getX() <= getWidth() - RADIUS){
 				ball.move(vx, vy);
 				pause(PAUSETIME);
-			} else {
-				vx *= -1;
+				vx*=-1;
+			} if(vx< 0){
 				ball.move(vx, vy);
 				pause(PAUSETIME);
 			}

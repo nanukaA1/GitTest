@@ -16,7 +16,7 @@ public class problem40 extends GraphicsProgram {
 		int vy = 0;
 		while (true) {
 
-			if (ball.getX() <= getWidth() - RADIUS) {
+			if (ball.getX() <= getWidth() - 2 * RADIUS) {
 				vx = -vx;
 			}
 

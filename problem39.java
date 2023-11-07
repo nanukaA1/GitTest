@@ -11,7 +11,7 @@ public class problem39 extends GraphicsProgram {
 		add(myRect, 100, 150);
 		
 		myRect.setColor(Color.RED);
-		pause(PAUSETIME);
+		//pause(PAUSETIME);
 		myRect.setColor(Color.GREEN);
 		myRect.setLocation(200, 250);
 		

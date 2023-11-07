@@ -9,7 +9,7 @@ public class problem39 extends GraphicsProgram {
 	public void run() {
 		GOval ball = new GOval(20, 20);
 		add(ball, 0, getHeight()/ 2);
-		//pause(PAUSETIME);
+		pause(PAUSETIME);
 		ball.move(getWidth()- 20, 0);
 		pause(PAUSETIME);
 	}

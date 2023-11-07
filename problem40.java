@@ -1,5 +1,6 @@
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
+
 //წინა ამოცანის გაგრძელება, დაამატეთ ვერტიკალური კედლებიდან ასხლეტვა. ანუ ბურთი
 //მოძრაობს მარცხენა კედლიდან მარჯვნივ. როგორც კი მარჯვენა კედელს დაეტაკება იმავე
 //სიჩქარით უნდა გააგრძელოს მოძრაობა მაჯვენა კედლიდან მარცხნივ. როგორც კი მარცხენა
@@ -14,16 +15,14 @@ public class problem40 extends GraphicsProgram {
 		int vx = 5;
 		int vy = 0;
 		while (true) {
-			
-			if(ball.getX() <= getWidth() - RADIUS){
-				ball.move(vx, vy);
-				pause(PAUSETIME);
-				vx*=-1;
-			} if(vx< 0){
-				ball.move(vx, vy);
-				pause(PAUSETIME);
+
+			if (ball.getX() <= getWidth() - RADIUS) {
+				vx = -vx;
 			}
-			
+
+			ball.move(vx, vy);
+			pause(PAUSETIME);
+
 		}
 	}
 }

@@ -1,7 +1,5 @@
 import java.awt.Color;
-
-import com.sun.glass.events.KeyEvent;
-import com.sun.glass.events.MouseEvent;
+import java.awt.event.MouseEvent;
 
 import acm.graphics.GObject;
 import acm.graphics.GOval;

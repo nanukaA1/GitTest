@@ -7,15 +7,12 @@ import acm.program.GraphicsProgram;
 
 public class problem41 extends GraphicsProgram {
 	public void run() {
-		addMouseListeners();
+		getMouseMotionListeners();
 	}
 
 	public void mouseClicked(MouseEvent e) {
-		GOval dot = new GOval(1, 1);
+		GOval dot = new GOval(2, 2);
 		dot.setFilled(true);
-		while(true) {
-			add(dot, e.getX(), e.getY());
-		}
-		
+		add(dot, e.getX() - 1, e.getY()-1);
 	}
 }

@@ -12,8 +12,8 @@ public class problem41 extends GraphicsProgram {
 
 	public void mouseClicked(MouseEvent e) {
 		GOval dot = new GOval(1, 1);
-		while(true) {
+		
 			add(dot, e.getX(), e.getY());
-		}
+		
 	}
 }

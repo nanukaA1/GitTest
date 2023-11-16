@@ -21,6 +21,7 @@ public class problem46 extends ConsoleProgram {
 			if(count1 > count2) {
 				count2 = count1;
 			}
+			count1 = 0;
 		}
 		return count2 - 1;
 

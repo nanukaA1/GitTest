@@ -3,7 +3,7 @@ import acm.program.ConsoleProgram;
 public class problem46 extends ConsoleProgram {
 	public void run() {
 		String str = readLine();
-		mostFrequentChar(str);
+		println(mostFrequentChar(str));
 	}
 
 	private int mostFrequentChar(String string) {

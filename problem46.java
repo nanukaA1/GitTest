@@ -6,10 +6,11 @@ public class problem46 extends ConsoleProgram {
 		println(mostFrequentChar(str));
 	}
 
-	private int mostFrequentChar(String string) {
+	private char mostFrequentChar(String string) {
 		int count1 = 0;
 		int count2 = 0;
 		char ch;
+		char freqChar;
 
 		for (int i = 0; i < string.length(); i++) {
 			ch = string.charAt(i);
@@ -17,13 +18,14 @@ public class problem46 extends ConsoleProgram {
 				if (ch == string.charAt(j)) {
 					count1++;
 				}
+				if(count1 > count2) {
+					freqChar == string.charAt(j);
+				}
 			}
-			if(count1 > count2) {
-				count2 = count1;
-			}
+			
 			count1 = 0;
 		}
-		return count2;
+		return freqChar;
 
 	}
 }

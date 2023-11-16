@@ -7,8 +7,8 @@ public class problem46 extends ConsoleProgram {
 	}
 
 	private char mostFrequentChar(String string) {
-		int count1 = 0;
-		int count2 = 0;
+		int currCount = 0;
+		int maxCount = 0;
 		char ch;
 		char freqChar = 0;
 
@@ -16,14 +16,15 @@ public class problem46 extends ConsoleProgram {
 			ch = string.charAt(i);
 			for (int j = 0; j < string.length(); j++) {
 				if (ch == string.charAt(j)) {
-					count1++;
+					currCount++;
 				}
-				if(count1 > count2) {
+				if(currCount > maxCount) {
 					freqChar = string.charAt(j);
 				}
 			}
 			
-			count1 = 0;
+			currCount = 0;
+			maxCount = 0;
 		}
 		return freqChar;
 

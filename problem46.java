@@ -10,7 +10,7 @@ public class problem46 extends ConsoleProgram {
 		int count1 = 0;
 		int count2 = 0;
 		char ch;
-		char freqChar;
+		char freqChar = 0;
 
 		for (int i = 0; i < string.length(); i++) {
 			ch = string.charAt(i);
@@ -19,7 +19,7 @@ public class problem46 extends ConsoleProgram {
 					count1++;
 				}
 				if(count1 > count2) {
-					freqChar == string.charAt(j);
+					freqChar = string.charAt(j);
 				}
 			}
 			

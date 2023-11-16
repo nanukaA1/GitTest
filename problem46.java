@@ -22,9 +22,8 @@ public class problem46 extends ConsoleProgram {
 					freqChar = string.charAt(j);
 				}
 			}
-			
+			maxCount = currCount;
 			currCount = 0;
-			maxCount = 0;
 		}
 		return freqChar;
 

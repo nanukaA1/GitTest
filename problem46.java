@@ -12,7 +12,7 @@ public class problem46 extends ConsoleProgram {
 		char ch;
 		char freqChar = 0;
 
-		for (int i = 0; i < string.length(); i++) {
+		for (int i = 0; i < string.length() + 1; i++) {
 			ch = string.charAt(i);
 			for (int j = 0; j < string.length(); j++) {
 				if (ch == string.charAt(j)) {

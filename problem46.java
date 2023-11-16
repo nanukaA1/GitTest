@@ -23,7 +23,7 @@ public class problem46 extends ConsoleProgram {
 			}
 			count1 = 0;
 		}
-		return count2 - 1;
+		return count2;
 
 	}
 }

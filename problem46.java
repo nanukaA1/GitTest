@@ -87,7 +87,7 @@ public class problem46 extends GraphicsProgram {
 	}
 
 	private void setUpGame() {
-		drawBricks(getWidth() / 2, BRICK_Y_OFFSET);
+		drawBricks();
 		drawPaddle();
 		drawBall();
 	}
@@ -96,7 +96,7 @@ public class problem46 extends GraphicsProgram {
 	private GRect brick;
 
 	// drawing all the bricks necessary for the game
-	private void drawBricks(double cx, double cy) {
+	private void drawBricks() {
 
 		/*
 		 * need to have several columns in each row so there need to be two for
@@ -116,7 +116,7 @@ public class problem46 extends GraphicsProgram {
 				 * need to: add a brick width add a separation width
 				 */
 
-				double x = cx - (NBRICKS_PER_ROW * BRICK_WIDTH) / 2 - ((NBRICKS_PER_ROW - 1) * BRICK_SEP) / 2
+				double x = getWidth() / 2 - (NBRICKS_PER_ROW * BRICK_WIDTH) / 2 - ((NBRICKS_PER_ROW - 1) * BRICK_SEP) / 2
 						+ column * BRICK_WIDTH + column * BRICK_SEP;
 
 				/*
@@ -125,7 +125,7 @@ public class problem46 extends GraphicsProgram {
 				 * height and a brick separation for each of the following rows
 				 */
 
-				double y = cy + row * BRICK_HEIGHT + row * BRICK_SEP;
+				double y = BRICK_Y_OFFSET + row * BRICK_HEIGHT + row * BRICK_SEP;
 
 				brick = new GRect(x, y, BRICK_WIDTH, BRICK_HEIGHT);
 				add(brick);

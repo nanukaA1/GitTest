@@ -5,6 +5,7 @@ import acm.program.GraphicsProgram;
 //მოძრაობს მარცხენა კედლიდან მარჯვნივ. როგორც კი მარჯვენა კედელს დაეტაკება იმავე
 //სიჩქარით უნდა გააგრძელოს მოძრაობა მაჯვენა კედლიდან მარცხნივ. როგორც კი მარცხენა
 //კედელს დაეტაკება უნდა გააგრძელოს მარჯვნივ და ა.შ. უსასრულოდ.
+
 public class problem40 extends GraphicsProgram {
 	private static final int RADIUS = 20;
 	private static final int PAUSETIME = 10;

@@ -22,7 +22,6 @@ public class problem35 extends ConsoleProgram {
 			numFlips += 1;
 			boolean isHeads = rgen.nextBoolean(); // თუ ყალბი მონეტაა და ვთქვათ
 													// ალბათობა 9 მაშინ 0.1-ს
-													// ჩავწერდით
 			if (isHeads) {
 				break;
 			}

@@ -12,13 +12,13 @@ public class problem50 extends ConsoleProgram {
 	}
 
 	private Boolean isInAscendingOrder(String text) {
-		 char prevChar = 'a'; // Starting with 'a'
-	        for (char currentChar : text.toCharArray()) {
-	            if (Character.isLowerCase(currentChar)) {
-	                if (currentChar < prevChar) {
+		 char ch = 'a'; 
+	        for (int i = 0; i < text.length(); i++) {
+	            if (Character.isLowerCase(i)) {
+	                if (i < ch) {
 	                    return false;
 	                }
-	                prevChar = currentChar;
+	                ch = text.charAt(i);
 	            }
 	        }
 	        return true;

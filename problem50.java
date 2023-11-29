@@ -14,7 +14,7 @@ public class problem50 extends ConsoleProgram {
 	private Boolean isInAscendingOrder(String text) {
 		 char ch = 'a'; 
 	        for (int i = 0; i < text.length(); i++) {
-	            if (Character.isLowerCase(i)) {
+	            if (isLowerCase(text.charAt(i))) {
 	                if (i < ch) {
 	                    return false;
 	                }

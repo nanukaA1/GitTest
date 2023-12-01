@@ -21,7 +21,7 @@ public class problem51 extends ConsoleProgram {
 				newText += Integer.toString(count);
 				newText += currentChar;
 				currentChar = input.charAt(i);
-				count = 1;
+				count = 0;
 			}
 		}
 		return newText;

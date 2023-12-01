@@ -24,6 +24,17 @@ public class problem51 extends ConsoleProgram {
 				count = 1;
 			}
 		}
-		return newText;
+		char currentChar = input.charAt(input.length()-1);
+		for (int i = input.length()-2; i > 0; i++) {
+			if (input.charAt(i) == currentChar) {
+				count++;
+			} else {
+				newText += Integer.toString(count);
+				newText += currentChar;
+				break;
+			}
+		}
+		
+				return newText;
 	}
 }

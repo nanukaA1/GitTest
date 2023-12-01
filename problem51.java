@@ -10,7 +10,7 @@ public class problem51 extends ConsoleProgram{
 		
 	}
 	
-	public static String removeNplet(String input, int n) {
+	private String removeNplet(String input, int n) {
         // Check if the length of the input string is less than n
         if (input.length() < n) {
             return input;

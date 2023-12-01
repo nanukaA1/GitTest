@@ -9,8 +9,7 @@ public class problem35 extends ConsoleProgram {
 	public void run() {
 		double sumOfFlips = 0;
 		for (int i = 0; i < NUM_EXPERIMENTS; i++) {
-			int currNumFlips = holdExperiment();
-			sumOfFlips += currNumFlips;
+			sumOfFlips += holdExperiment();
 		}
 		double avgFlips = sumOfFlips / NUM_EXPERIMENTS;
 		println("avg number of flips: " + avgFlips);

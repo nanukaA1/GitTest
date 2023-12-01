@@ -1,3 +1,7 @@
+
+
+import java.awt.Color;
+
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
@@ -7,23 +11,32 @@ import acm.program.GraphicsProgram;
 //კედელს დაეტაკება უნდა გააგრძელოს მარჯვნივ და ა.შ. უსასრულოდ.
 
 public class problem40 extends GraphicsProgram {
+	private static final int PAUSE = 5;
+	private static final int VEL_X = 3;
 	private static final int RADIUS = 20;
-	private static final int PAUSETIME = 10;
 
 	public void run() {
-		GOval ball = new GOval(RADIUS, RADIUS);
-		add(ball, 0, getHeight() / 2);
-		int vx = 5;
+		GOval circle = addCircle();
+		int vx = VEL_X;
 		int vy = 0;
-		while (true) {
 
-			if (ball.getX() > getWidth() - 2 * RADIUS) {
+		while (true) {
+			if ((circle.getX() + 2 * RADIUS >= getWidth()) || (circle.getX() < 0)) {
 				vx = -vx;
 			}
-
-			ball.move(vx, vy);
-			pause(PAUSETIME);
-
+			circle.move(vx, vy);
+			pause(PAUSE);
 		}
+
+	}
+
+	private GOval addCircle() {
+		GOval circle = new GOval(2 * RADIUS, 2 * RADIUS);
+		circle.setFilled(true);
+		circle.setColor(Color.GREEN);
+		double x = 0;
+		double y = getHeight() / 2 - RADIUS;
+		add(circle, x, y);
+		return circle;
 	}
 }

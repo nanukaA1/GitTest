@@ -18,7 +18,8 @@ public class problem51 extends ConsoleProgram {
 			if (input.charAt(i) == currentChar) {
 				count++;
 			} else {
-				newText += Integer.toString(count) + currentChar;
+				newText += Integer.toString(count);
+				newText += currentChar;
 				currentChar = input.charAt(i);
 				count = 1;
 			}

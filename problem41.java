@@ -6,14 +6,25 @@ import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
 public class problem41 extends GraphicsProgram {
+	private static final int RADIUS = 20;
+
 	public void run() {
 		addMouseListeners();
-		getMouseMotionListeners();
 	}
 
+	@Override
 	public void mouseDragged(MouseEvent e) {
-		GOval dot = new GOval(2, 2);
-		dot.setFilled(true);
-		add(dot, e.getX() - 1, e.getY() - 1);
+		paintCircle(e.getX(), e.getY());
+	}
+	
+	@Override
+	public void mousePressed(MouseEvent e) {
+		paintCircle(e.getX(), e.getY());
+	}
+	
+	private void paintCircle(int centerX, int centerY) {
+		GOval circle = new GOval(2 * RADIUS, 2 * RADIUS);
+		circle.setFilled(true);
+		add(circle, centerX - RADIUS, centerY - RADIUS);
 	}
 }

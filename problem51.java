@@ -2,12 +2,12 @@ import acm.program.ConsoleProgram;
 
 public class problem51 extends ConsoleProgram{
 	public void run() {
-		while(true) {
+	
 			 String input = "aaabbbccc";
 		        int n = 3;
 		        String result = removeNplet(input, n);
 		        println(result);
-		}
+		
 	}
 	
 	public static String removeNplet(String input, int n) {

@@ -3,7 +3,7 @@ import acm.program.ConsoleProgram;
 public class problem51 extends ConsoleProgram {
 	public void run() {
 
-		String input = "aabbbbcc";
+		String input = "aabbbbccddd";
 		int n = 3;
 		String result = compresse(input);
 		println(result);

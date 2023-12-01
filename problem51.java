@@ -9,16 +9,16 @@ public class problem51 extends ConsoleProgram{
 	}
 	
 	 public static String removeNplet(String input, int n) {
-	       
+		 int b = 0;
 
 	        // Iterate through the string to find and remove nplets
 	        for (int i = 0; i <= input.length() - n; i++) {
 	            // Check if the current substring is an nplet
 	           if(input.charAt(i) == input.charAt(i+1)) {
-	        	   int b = i;
+	        	   b = i;
 	           }
 
-	            // If it's an nplet, remove it and recursively call the method
+	          
 	           
 	                String newInput = input.substring(0, b) + input.substring(b + n);
 	                return removeNplet(newInput, n);

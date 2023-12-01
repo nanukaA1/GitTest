@@ -4,12 +4,12 @@ public class problem51 extends ConsoleProgram{
 	public void run() {
 		while(true) {
 			String text = readLine("Enter text: ");
-			String editedText = removeDuplicates(text);
+			String editedText = removeNplet(text);
 			println(editedText);
 		}
 	}
 	
-	private String removeDuplicates(String text) {
+	private String removeNplet(String text) {
 		String result = "";
 		for(int i = 0; i < text.length(); i++) {
 			char ch  = text.charAt(i);

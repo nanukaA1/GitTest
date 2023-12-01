@@ -24,9 +24,8 @@ public class problem51 extends ConsoleProgram {
 				count = 1;
 			}
 		}
-		count = 1;
-		currentChar = input.charAt(input.length()-2);
-		for (int i = input.length()-2; i > 0; i++) {
+		currentChar = input.charAt(input.length()-1);
+		for (int i = input.length()-2; i > 0; i--) {
 			if (input.charAt(i) == currentChar) {
 				count++;
 			} else {

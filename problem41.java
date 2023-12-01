@@ -6,7 +6,7 @@ import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
 public class problem41 extends GraphicsProgram {
-	private static final int RADIUS = 20;
+	private static final int RADIUS = 8;
 
 	public void run() {
 		addMouseListeners();

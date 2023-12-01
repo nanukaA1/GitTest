@@ -20,6 +20,7 @@ public class problem51 extends ConsoleProgram{
            } else {
         	   newText = "" + count + currentChar;
         	   currentChar = input.charAt(i);
+        	   count = 0;
            }
        }
        return newText;

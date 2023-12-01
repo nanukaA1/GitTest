@@ -14,7 +14,7 @@ public class problem51 extends ConsoleProgram{
 		String newText = "";
 		char currentChar = input.charAt(0);
 		int count = 0;
-       for(int i =1 ; i < input.length(); i++) {
+       for(int i =1 ; i < input.length()+1; i++) {
     	   if (input.charAt(i) == currentChar) {
                count++;
            } else {

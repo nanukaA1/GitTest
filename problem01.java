@@ -15,7 +15,9 @@ public class problem01 extends ConsoleProgram {
 		        found = false;
 		    }
 		}
-		println(" " + current);
+		for(int i =0; i< input.length;i++ ){
+		println(input[i]);}
+		
 	}
 
 }

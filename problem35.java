@@ -3,7 +3,7 @@ import acm.program.ConsoleProgram;
 import acm.util.RandomGenerator;
 
 public class problem35 extends ConsoleProgram {
-	private static final int NUM_EXPERIMENTS = 1000000000;
+	private static final int NUM_EXPERIMENTS = 100000;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
 	public void run() {

@@ -18,8 +18,8 @@ public class problem29 extends ConsoleProgram {
 		
 		int a = 0;
 		int b = 1;
-		
 		int x = -1;
+		
 		for (int i = 2; i <= n; i++) {
 			x = b + a;
 			a = b;

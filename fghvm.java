@@ -30,12 +30,12 @@ public class fghvm extends ConsoleProgram {
 		if (rand == bet) {
 			balance += betMoney;
 			println("you win");
-			println("your balance is " + betMoney);
+			println("your balance is " + balance);
 		}
 		if (rand == bet) {
 			balance -= betMoney;
 			println("you lose");
-			println("your balance is " + betMoney);
+			println("your balance is " + balance);
 		}
 	}
 

@@ -1,16 +1,13 @@
 import acm.graphics.GLine;
+import acm.program.ConsoleProgram;
 import acm.program.GraphicsProgram;
 
-public class fghvm extends GraphicsProgram {
+public class fghvm extends ConsoleProgram {
 	public void run() {
-		drawLine();
+		int a = readInt();
+		int b = readInt();
+		double x = (a+b)/2;
+		println(x);
 	}
 
-	private void drawLine() {
-		double y = getHeight() /  2;
-		double x1 = 0;
-		double x2 = getWidth();
-		GLine line = new GLine(x1, y, x2, y);
-		add(line);
-	}
 }

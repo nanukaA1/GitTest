@@ -6,7 +6,7 @@ public class fghvm extends ConsoleProgram {
 	public void run() {
 		int a = readInt();
 		int b = readInt();
-		double x = (a+b)/2;
+		double x = (double)(a+b)/2;
 		println(x);
 	}
 

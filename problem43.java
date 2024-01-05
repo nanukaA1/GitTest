@@ -1,39 +1,38 @@
 
 import java.awt.event.MouseEvent;
-import acm.graphics.*;
+
+import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
 public class problem43 extends GraphicsProgram {
-	private static final int RADIUS = 50;
-	private GObject lastPressedObj;
-	private int prevX;
-	private int prevY;
-	
+	private GOval circle;
+	private int x;
+	private int y;
+
 	public void run() {
-		GOval circle = new GOval(2 * RADIUS, 2 * RADIUS);
-		circle.setFilled(true);
-		add(circle, getWidth() / 2 - RADIUS, getHeight() / 2 - RADIUS);
+		addCircle();
 		addMouseListeners();
 	}
-	
+
 	public void mousePressed(MouseEvent e) {
-		GObject obj = getElementAt(e.getX(), e.getY());
-		lastPressedObj = obj;
-		if(obj != null) {
-			// update values
-			prevX = e.getX();
-			prevY = e.getY();
+		if (getElementAt(e.getX(), e.getY()) != null) {
+			x = e.getX();
+			y = e.getY();
 		}
 	}
-	
+
 	public void mouseDragged(MouseEvent e) {
-		if(lastPressedObj != null) {
-			// move object
-			lastPressedObj.move(e.getX() - prevX, e.getY() - prevY);
-			// update values
-			prevX = e.getX();
-			prevY = e.getY();
-		}
+		//if (getElementAt(e.getX(), e.getY()) != null) {
+			circle.move(e.getX() - x, e.getY() - y);
+			x = e.getX();
+			y = e.getY();
+		//}
+	}
+
+	private void addCircle() {
+		circle = new GOval(50, 50);
+		circle.setFilled(true);
+		add(circle, getWidth() / 2 - 25, getHeight() / 2 - 25);
 	}
 
 }

@@ -13,12 +13,12 @@ public class fghvm extends GraphicsProgram {
 	}
 
 	private void addVertical() {
-		double x = 0;
 		double y1 = 0;
 		double y2 = getHeight();
-		GLine line = new GLine(x, y1, x, y2);
+		//GLine line = new GLine(x, y1, x, y2);
 		for (int i = 0; i < 11; i++) {
-			x = x + i * getWidth() / 10;
+			double x = i * getWidth() / 10;
+			GLine line = new GLine(x, y1, x, y2);
 			add(line);
 		}
 	}

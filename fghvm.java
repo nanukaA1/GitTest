@@ -26,13 +26,13 @@ public class fghvm extends ConsoleProgram {
 
 	private void spin(int bet, int betMoney) {
 		int rand = rgen.nextInt(0, 36);
-		println(rand);
+		println("apinned num" + rand);
 		if (rand == bet) {
 			balance += betMoney;
 			println("you win");
 			println("your balance is " + balance);
 		}
-		if (rand == bet) {
+		if (rand != bet) {
 			balance -= betMoney;
 			println("you lose");
 			println("your balance is " + balance);

@@ -1,5 +1,6 @@
 
 import acm.graphics.GRect;
+import acm.program.ConsoleProgram;
 import acm.program.GraphicsProgram;
 
 public class problem22 extends ConsoleProgram {

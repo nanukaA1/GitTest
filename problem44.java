@@ -10,6 +10,7 @@ public class problem44 extends GraphicsProgram{
 	}
 	public void mouseClicked(MouseEvent e) {
 		ball = new GOval(e.getX() - 25, e.getY() - 25, 50, 50);
+		ball.setFilled(true);
 		add(ball);
 	}
 }

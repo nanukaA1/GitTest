@@ -4,17 +4,19 @@ import acm.program.GraphicsProgram;
 
 public class fghvm extends GraphicsProgram {
 	public void run() {
-		for(int i = 0; i < 8; i++) {
-			for(int j = 0; j < 8; j++) {
-				drawChessBoard();
-			}
-		}
+		int a = readInt();
+		int b = readInt();
+		usj(a, b);
 	}
 
-	private void drawChessBoard() {
-		double width = 
-		double height
-		GRect rect = new GRect();
+	private void usj(int a, int b ) {
+		int usj = 0;
+		for(int i = Math.min(a, b); i>=1; i--) {
+			if(a % i == 0 && b % i == 0) {
+				usj = i;
+			}
+		}
+		println(usj);
 	}
 
 }

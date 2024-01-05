@@ -10,7 +10,7 @@ public class problem34 extends GraphicsProgram {
 	private static final int MIN_RADIUS = 5;
 	private static final int MAX_RADIUS = 10;
 	public void run() {
-		for(int i = 0; i < 1000; i++) {
+		for(int i = 0; i < 100; i++) {
 			addRandomCircle();
 		}
 	}
@@ -25,6 +25,8 @@ public class problem34 extends GraphicsProgram {
 		circle.setColor(color);
 		
 		add(circle, x, y);
+		pause(20);
+		remove(circle);
 	}
 }
 

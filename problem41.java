@@ -16,7 +16,7 @@ public class problem41 extends GraphicsProgram {
 		paintCircle(e.getX(), e.getY());
 	}
 	
-	public void mousePressed(MouseEvent e) {
+	public void mouseClicked(MouseEvent e) {
 		paintCircle(e.getX(), e.getY());
 	}
 	

@@ -3,20 +3,14 @@ import acm.program.ConsoleProgram;
 import acm.program.GraphicsProgram;
 
 public class fghvm extends ConsoleProgram {
-	private static final int SENTINEL = -1;
-
 	public void run() {
-		int x = 0;
-		while (true) {
-			int a = readInt();
-			if (a == -1) {
-				break;
-			}
-			if (a % 2 == 0) {
-				x++;
-			}
+		int x = readInt();
+		int y = 0;
+		while(x > 0) {
+			y = y * 10 + x % 10;
+			x/=10;
 		}
-		println(x);
+		println(y);
 	}
-
+	
 }

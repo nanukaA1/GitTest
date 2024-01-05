@@ -3,7 +3,7 @@ import acm.program.ConsoleProgram;
 import acm.util.RandomGenerator;
 
 public class problem35 extends ConsoleProgram {
-	private static final int NUM_EXPERIMENTS = 10000;
+	private static final int NUM_EXPERIMENTS = 10000000;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
 	public void run() {
@@ -20,7 +20,7 @@ public class problem35 extends ConsoleProgram {
 		while (true) {
 			numFlips += 1;
 			boolean isHeads = rgen.nextBoolean(); // თუ ყალბი მონეტაა და ვთქვათ
-													// ალბათობა 9 მაშინ 0.1-ს
+													// ალბათობა 9 მაშინ 0.1-ს...
 			if (isHeads) {
 				break;
 			}

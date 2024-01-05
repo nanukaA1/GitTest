@@ -4,23 +4,17 @@ import acm.program.GraphicsProgram;
 
 public class fghvm extends GraphicsProgram {
 	public void run() {
-		drawGrid();
-	}
-
-	private void drawGrid() {
-		addVertical();
-		// addHorizontal();
-	}
-
-	private void addVertical() {
-		double y1 = 0;
-		double y2 = getHeight();
-		//GLine line = new GLine(x, y1, x, y2);
-		for (int i = 0; i < 11; i++) {
-			double x = i * getWidth() / 10;
-			GLine line = new GLine(x, y1, x, y2);
-			add(line);
+		for(int i = 0; i < 8; i++) {
+			for(int j = 0; j < 8; j++) {
+				drawChessBoard();
+			}
 		}
+	}
+
+	private void drawChessBoard() {
+		double width = 
+		double height
+		GRect rect = new GRect();
 	}
 
 }

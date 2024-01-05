@@ -2,7 +2,7 @@
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
-public class problem22 extends GraphicsProgram{
+public class problem22 extends ConsoleProgram {
 	public void run() {
 		int a = readInt();
 		int x = 0;

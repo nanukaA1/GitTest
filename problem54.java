@@ -21,8 +21,8 @@ public class problem54 extends ConsoleProgram {
 				max2 = arr[i];
 			}
 		}
-		println(max1);
-		println(max2);
+		println("largest " + max1);
+		println("second largest " + max2);
 	}
 
 }

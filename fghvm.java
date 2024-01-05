@@ -4,13 +4,19 @@ import acm.program.GraphicsProgram;
 
 public class fghvm extends ConsoleProgram {
 	public void run() {
-		int x = readInt();
-		int y = 0;
-		while(x > 0) {
-			y = y * 10 + x % 10;
-			x/=10;
-		}
-		println(y);
+		println(isPrime());
 	}
+
+	private boolean isPrime() {
+		int b = readInt();
+		int x = 0;
+		for(int i = 1; i <= b; i++) {
+			if(b % i == 0) {
+				x++;
+			}
+		}
+		return x == 2;
+	}
+	
 	
 }

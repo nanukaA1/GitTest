@@ -22,11 +22,11 @@ public class problem43 extends GraphicsProgram {
 	}
 
 	public void mouseDragged(MouseEvent e) {
-		//if (getElementAt(e.getX(), e.getY()) != null) {
+		if (getElementAt(e.getX(), e.getY()) != null) {
 			circle.move(e.getX() - x, e.getY() - y);
 			x = e.getX();
 			y = e.getY();
-		//}
+		}
 	}
 
 	private void addCircle() {

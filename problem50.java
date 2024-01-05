@@ -9,8 +9,9 @@ public class problem50 extends ConsoleProgram {
 
 		int count = 0;
 		while (tokenizer.hasMoreTokens()) {
-			tokenizer.nextToken();
 			count++;
+			tokenizer.nextToken();
+			//count++;
 		}
 		println(count);
 	}

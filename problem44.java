@@ -9,7 +9,7 @@ public class problem44 extends GraphicsProgram{
 		addMouseListeners();
 	}
 	public void mouseClicked(MouseEvent e) {
-		ball = new GOval(e.getX(), e.getY(), 50, 50);
+		ball = new GOval(e.getX() + 25, e.getY() + 25, 50, 50);
 		add(ball);
 	}
 }

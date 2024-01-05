@@ -2,12 +2,10 @@ import acm.program.ConsoleProgram;
 
 public class problem49 extends ConsoleProgram {
 	public void run() {
-		String numStr = "12340";
+		String numStr = "56875";
 		int num = stringToInteger(numStr);
 
 		println(num);
-		println(num - 1);
-		println(num + 1);
 	}
 
 	private int stringToInteger(String numStr) {

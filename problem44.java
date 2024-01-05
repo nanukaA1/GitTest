@@ -7,6 +7,10 @@ public class problem44 extends GraphicsProgram{
 	private GOval ball;
 	public void run() {
 		addMouseListeners();
+		while(true) {
+			ball.move(0, 5);
+			pause(20);
+		}
 	}
 	public void mouseClicked(MouseEvent e) {
 		remove(ball);
@@ -14,9 +18,6 @@ public class problem44 extends GraphicsProgram{
 		ball.setFilled(true);
 		add(ball);
 		
-		while(true) {
-			ball.move(0, 5);
-			pause(20);
-		}
+		
 	}
 }

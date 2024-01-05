@@ -6,7 +6,6 @@ public class problem58 extends ConsoleProgram{
 				{1, 2, 3},
 				{9, 7, 8},
 				{4, 5, 6}};
-		println(matrix[2].length);
 		println(isMagical(matrix));
 	}
 
@@ -20,8 +19,14 @@ public class problem58 extends ConsoleProgram{
 		return true;
 	}
 
-	private boolean contains(int[][] matrix, int i) {
-		// TODO Auto-generated method stub
+	private boolean contains(int[][] matrix, int num) {
+		for(int i = 0; i < matrix.length; i++){
+			for(int j = 0; j < matrix.length; j++){
+				if(matrix[i][j] == num){
+					return true;
+				}
+			}
+		}
 		return false;
 	}
 }

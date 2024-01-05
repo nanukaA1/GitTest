@@ -9,8 +9,14 @@ public class problem44 extends GraphicsProgram{
 		addMouseListeners();
 	}
 	public void mouseClicked(MouseEvent e) {
+		remove(ball);
 		ball = new GOval(e.getX() - 25, e.getY() - 25, 50, 50);
 		ball.setFilled(true);
 		add(ball);
+		
+		while(true) {
+			ball.move(0, 5);
+			pause(20);
+		}
 	}
 }

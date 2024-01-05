@@ -8,12 +8,8 @@ public class problem42 extends GraphicsProgram {
 
     private GLine activeLine;
 
-    public void init() {
-        addMouseListeners();
-    }
-
     public void run() {
-    	
+    	addMouseListeners();
     }
 
     @Override

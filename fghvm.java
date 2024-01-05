@@ -3,21 +3,20 @@ import acm.program.ConsoleProgram;
 import acm.program.GraphicsProgram;
 
 public class fghvm extends ConsoleProgram {
-	public void run() {
-		int a = readInt();
-		int b = readInt();
-		usj(a, b);
-	}
+	private static final int SENTINEL = -1;
 
-	private void usj(int a, int b ) {
-		int usj = 0;
-		for(int i = Math.min(a, b); i>=1; i--) {
-			if(a % i == 0 && b % i == 0) {
-				usj = i;
+	public void run() {
+		int x = 0;
+		while (true) {
+			int a = readInt();
+			if (a == -1) {
 				break;
 			}
+			if (a % 2 == 0) {
+				x++;
+			}
 		}
-		println(usj);
+		println(x);
 	}
 
 }

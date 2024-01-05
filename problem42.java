@@ -17,7 +17,7 @@ public class problem42 extends GraphicsProgram{
 		y1 = getY();
 	}
 	
-	public void mouseReleased(MouseEvent e) {
+	public void mouseDragged(MouseEvent e) {
 		x2 = getX();
 		y2 = getY();
 		

@@ -15,8 +15,8 @@ public class problem56 extends ConsoleProgram {
 
 	private void sortedArray() {
 		while (!isSorted()) {
-			int i = 1;
-			for (i = 1; i < arr.length; i++) {
+			//int i = 1;
+			for (int i = 1; i < arr.length; i++) {
 				if (arr[i] < arr[i - 1]) {
 					int x = arr[i];
 					arr[i] = arr[i - 1];

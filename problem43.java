@@ -11,6 +11,6 @@ public class problem43 extends GraphicsProgram{
 
 	private void addCircle() {
 		GOval circle = new GOval(50, 50);
-		add(circle, getWidth() / 2 - 25, getHeight() / 2);
+		add(circle, getWidth() / 2 - 25, getHeight() / 2 - 25);
 	}
 }

@@ -6,7 +6,7 @@ public class problem58 extends ConsoleProgram{
 				{1, 2, 3},
 				{9, 7, 8},
 				{4, 5, 6}};
-		println(matrix[0].length);
+		println(matrix[6].length);
 		println(isMagical(matrix));
 	}
 

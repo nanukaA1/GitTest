@@ -3,7 +3,6 @@ import acm.program.ConsoleProgram;
 public class problem51 extends ConsoleProgram{
 	public void run() {
 		String text = readLine();
-		println(text.indexOf("l"));
 		println(removeDuplicates(text));
 	}
 

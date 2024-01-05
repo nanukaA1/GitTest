@@ -18,7 +18,7 @@ public class fghvm extends GraphicsProgram {
 		double y2 = getHeight();
 		GLine line = new GLine(x, y1, x, y2);
 		for (int i = 0; i < 11; i++) {
-			x += i * getWidth() / 10;
+			x = x + i * getWidth() / 10;
 			add(line);
 		}
 	}

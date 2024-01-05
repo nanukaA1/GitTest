@@ -1,7 +1,5 @@
-import java.awt.Color;
 
 import acm.graphics.GOval;
-import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
 public class problem39 extends GraphicsProgram {

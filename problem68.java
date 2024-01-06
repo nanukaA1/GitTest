@@ -9,47 +9,54 @@ import acm.graphics.GLabel;
 import acm.program.GraphicsProgram;
 
 public class problem68 extends GraphicsProgram {
-	private static final int DISTANCE = 40;
+	
 	private JTextField textField;
 	private JButton button;
-	private double x = DISTANCE;
-	private double y = DISTANCE;
+	private List<GLabel> labelList;
 	
+	private void addLabels() {
+		removeAll();
+		double lastY = 0;
+		for (GLabel label : labelList) {
+			lastY += label.getAscent();
+			add(label, 0, lastY);
+		}
+	}
+	
+	@Override
 	public void init() {
-		textField = new JTextField(20);
-		add(textField, SOUTH);
-		textField.addActionListener(this);
-
-		
+		labelList = new ArrayList<GLabel>(); 
+		textField = new JTextField(30);
 		button = new JButton("Enter");
+		add(textField, SOUTH);
 		add(button, SOUTH);
-		
-		
-		addActionListeners();
-		
+		textField.addActionListener(this);
+		button.addActionListener(this);
 	}
-
-	public void run() {
-
-	}
-
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		println("here");
-		if(e.getSource() == textField || e.getSource() == button) {
-			String text = textField.getText();
-			println(text);
-			displayMessage(text);
-			textField.setText("");
-		}
-	}
-	
-	private void displayMessage(String text) {
-		if(text == null || text.equals("")) {
+		String text = textField.getText();
+		if (text.isEmpty()) {
 			return;
 		}
-		GLabel message = new GLabel(text);
-		add(message, x, y);
-		y += DISTANCE;
+		textField.setText("");
+		addLabel(text);
 	}
+	
+	private void addLabel(String text) {
+		GLabel label = new GLabel(text);
+		label.setFont("-30");
+		double lastY = 0;
+		if (!labelList.isEmpty()) {
+			lastY = labelList.get(labelList.size() - 1).getY();
+		}
+		if (lastY + label.getAscent() > getHeight()) {
+			labelList.remove(0);
+		}
+		labelList.add(label);
+		addLabels();
+	}
+	
+
 }

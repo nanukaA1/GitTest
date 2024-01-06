@@ -8,7 +8,7 @@ import javax.swing.JTextField;
 import acm.graphics.GLabel;
 import acm.program.GraphicsProgram;
 
-public class problem67 extends GraphicsProgram {
+public class problem68 extends GraphicsProgram {
 	
 	private JTextField textField;
 	private JButton button;

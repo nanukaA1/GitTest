@@ -1,43 +1,62 @@
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.swing.JButton;
 import javax.swing.JTextField;
 
-import acm.graphics.*;
+import acm.graphics.GLabel;
 import acm.program.GraphicsProgram;
-//67. გააკეთეთ ფოტოების აპლიკაცია. აპლიკაციას უნდა ჰქონდეს ტექსფილდი სადაც შეიძლება
-//ფოტოს(ფაილის) მისამართის ჩაწერა. ენტერზე დაჭერის შემდეგ ეს ფოტო უნდა გამოჩნდეს
-//ფანჯრის ცენტრში.
-public class problem67 extends GraphicsProgram{
-	private JTextField textField;
+
+public class problem67 extends GraphicsProgram {
 	
-	// სემინარზე რანში გვქონდა თავიდან დამატებული და უცნაურად იმიტომ გაიხსნა.
-	public void init() {
-		textField = new JTextField(20);
-		add(textField, SOUTH);
-		
-		textField.addActionListener(this);
-		addActionListeners();
-		
-		GImage image = new GImage("bad path");
-		double x = getWidth()/ 2 - image.getWidth() / 2;
-		double y = getHeight()/ 2 - image.getHeight() / 2;
-		add(image, x, y);
+	private JTextField textField;
+	private JButton button;
+	private List<GLabel> labelList;
+	
+	private void addLabels() {
+		removeAll();
+		double lastY = 0;
+		for (GLabel label : labelList) {
+			lastY += label.getAscent();
+			add(label, 0, lastY);
+		}
 	}
 	
+	@Override
+	public void init() {
+		labelList = new ArrayList<GLabel>(); 
+		textField = new JTextField(30);
+		button = new JButton("Enter");
+		add(textField, SOUTH);
+		add(button, SOUTH);
+		textField.addActionListener(this);
+		button.addActionListener(this);
+	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource() == textField) {
-			try {
-				GImage image = new GImage(textField.getText());
-				double x = getWidth()/ 2 - image.getWidth() / 2;
-				double y = getHeight()/ 2 - image.getHeight() / 2;
-				add(image, x, y);
-			} catch(Exception ex) {
-				removeAll();
-				add(new GLabel("Error occured"), 20, 20);
-			}
-			textField.setText("");
+		String text = textField.getText();
+		if (text.isEmpty()) {
+			return;
 		}
+		textField.setText("");
+		addLabel(text);
 	}
+	
+	private void addLabel(String text) {
+		GLabel label = new GLabel(text);
+		label.setFont("-30");
+		double lastY = 0;
+		if (!labelList.isEmpty()) {
+			lastY = labelList.get(labelList.size() - 1).getY();
+		}
+		if (lastY + label.getAscent() > getHeight()) {
+			labelList.remove(0);
+		}
+		labelList.add(label);
+		addLabels();
+	}
+	
+
 }

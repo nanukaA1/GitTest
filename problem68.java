@@ -26,7 +26,7 @@ public class problem68 extends GraphicsProgram {
 	@Override
 	public void init() {
 		labelList = new ArrayList<GLabel>(); 
-		textField = new JTextField(50);
+		textField = new JTextField(35);
 		button = new JButton("Enter");
 		add(textField, SOUTH);
 		add(button, SOUTH);

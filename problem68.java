@@ -41,7 +41,7 @@ public class problem68 extends GraphicsProgram {
 			return;
 		}
 		textField.setText("");
-		addLabel(text);
+		//addLabel(text);
 	}
 	
 	private void addLabel(String text) {

@@ -17,5 +17,10 @@ public class problem01 extends ConsoleProgram{
 	}
 		println(name);
 		println(ranking[i]);
+		String text = name + " [";
+		for(int i1 = 0; i1 < 11; i1++) {
+			text += ranking[i1] + " ";
+		}
+		println(text);
 
 }}

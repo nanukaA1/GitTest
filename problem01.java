@@ -1,8 +1,9 @@
 import java.util.StringTokenizer;
 
+import acm.program.ConsoleProgram;
 import stanford.karel.Karel;
 
-public class problem01 extends Karel{
+public class problem01 extends ConsoleProgram{
 
 	public void run(){
 		String line = "Abigayle 0 0 0 0 0 0 0 0 0 0 720";

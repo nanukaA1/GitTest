@@ -1,5 +1,4 @@
 import java.awt.event.ActionEvent;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,7 +41,7 @@ public class problem68 extends GraphicsProgram {
 			return;
 		}
 		textField.setText("");
-		//addLabel(text);
+		addLabel(text);
 	}
 	
 	private void addLabel(String text) {

@@ -10,7 +10,7 @@ public class problem01 extends ConsoleProgram{
 		String name = line.substring(0, line.indexOf(" "));
 		StringTokenizer tokenizer = new StringTokenizer(line, " ");
 		int i = 0;
-		int[] ranking = new int[12];
+		int[] ranking = new int[900];
 		while (tokenizer.hasMoreTokens()) {
 			ranking[i] = Integer.parseInt(tokenizer.nextToken());
 			i++;

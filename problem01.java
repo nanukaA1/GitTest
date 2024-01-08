@@ -8,7 +8,7 @@ public class problem01 extends ConsoleProgram{
 	public void run(){
 		String line = "Abigayle 0 0 0 0 0 0 0 0 0 0 720";
 		String name = line.substring(0, line.indexOf(" "));
-		StringTokenizer tokenizer = new StringTokenizer(line, " ");
+		StringTokenizer tokenizer = new StringTokenizer(line.substring(line.indexOf(" ")+1), " ");
 		int i = 0;
 		String[] ranking = new String[900];
 		while (tokenizer.hasMoreTokens()) {

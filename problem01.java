@@ -16,5 +16,6 @@ public class problem01 extends ConsoleProgram{
 			i++;
 	}
 		println(name);
+		println(ranking[i]);
 
 }}

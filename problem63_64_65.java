@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 import acm.program.ConsoleProgram;
@@ -23,11 +24,7 @@ public class problem63_64_65 extends ConsoleProgram{
 			}
 			
 			ArrayList<String> currFriends = friendLists.get(person);
-			currFriends.add(friend); // TODO add check for duplicates
-			
-			// we don't need to call put again
-//			friendLists.put(person, currFriends);
-			
+			currFriends.add(friend); 
 		}
 		
 	
@@ -44,8 +41,22 @@ public class problem63_64_65 extends ConsoleProgram{
 			}
 		}
 		
-		println("the most popular person: " + popularPerson);		
+		println("the most popular person: " + popularPerson);
+		
+		ArrayList<String> friendList1, friendList2;
+		for(String person: friendLists.keySet()) {
+			friendList1 = friendLists.get(person);
+			for(String person1: friendLists.keySet()) {
+				friendList2 = friendLists.get(person1);
+				if(person.equals(person1)) {
+					continue;
+				}
+				if(friendList1 == friendList2) {
+					println(person + " " + person1);
+				}
+			}
+		}
 		
 	}
-
+	
 }

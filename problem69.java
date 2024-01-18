@@ -6,7 +6,9 @@ import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
 public class problem69 extends GraphicsProgram implements ComponentListener{
-	
+	public problem69() {
+		addComponentListener(this);
+	}
 	public void init() {
 		removeAll();
 		drawGrid();
@@ -17,7 +19,6 @@ public class problem69 extends GraphicsProgram implements ComponentListener{
 			addVerticalLine(i);
 			addHorisontalLine(i);
 		}
-		addComponentListener(this);
 	}
 
 	private void addHorisontalLine(int i) {

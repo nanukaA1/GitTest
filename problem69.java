@@ -5,16 +5,14 @@ import acm.graphics.GLine;
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
-public class problem69 extends GraphicsProgram implements ComponentListener{
-	public problem69() {
-		addComponentListener(this);
-	}
+public class problem69 extends GraphicsProgram implements ComponentListener {
 	public void init() {
-		removeAll();
 		drawGrid();
+		addComponentListener(this);
 	}
 
 	private void drawGrid() {
+		removeAll();
 		for (int i = 0; i < 10; i++) {
 			addVerticalLine(i);
 			addHorisontalLine(i);
@@ -48,18 +46,18 @@ public class problem69 extends GraphicsProgram implements ComponentListener{
 	@Override
 	public void componentHidden(ComponentEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void componentMoved(ComponentEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void componentShown(ComponentEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 }

@@ -5,9 +5,13 @@ import acm.graphics.GLine;
 import acm.program.GraphicsProgram;
 
 public class problem69 extends GraphicsProgram {
-	public void run() {
+	
+	public problem69() {
+		addComponentListener(this);
+	}
+	public void init() {
+		removeAll();
 		drawGrid();
-		addComponentListener((ComponentListener) this);
 	}
 
 	private void drawGrid() {

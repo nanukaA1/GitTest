@@ -51,12 +51,18 @@ public class problem63_64_65 extends ConsoleProgram{
 				if(person.equals(person1)) {
 					continue;
 				}
-				if(friendList1 == friendList2) {
+				if(hasCommonFriend(friendList1, friendList2)) {
 					println(person + " " + person1);
 				}
 			}
 		}
 		
 	}
-	
+	private boolean hasCommonFriend(ArrayList<String> friendList1, ArrayList<String> friendList2) {
+		for (String friend : friendList1) {
+			if (friendList2.contains(friend))
+				return false;
+		}
+		return true;
+	}
 }

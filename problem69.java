@@ -2,13 +2,11 @@ import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 
 import acm.graphics.GLine;
+import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
-public class problem69 extends GraphicsProgram {
+public class problem69 extends GraphicsProgram implements ComponentListener{
 	
-	public problem69() {
-		addComponentListener(this);
-	}
 	public void init() {
 		removeAll();
 		drawGrid();
@@ -29,6 +27,7 @@ public class problem69 extends GraphicsProgram {
 
 		GLine line = new GLine(x1, y, x2, y);
 		add(line);
+		addComponentListener(this);
 	}
 
 	private void addVerticalLine(int i) {
@@ -43,5 +42,23 @@ public class problem69 extends GraphicsProgram {
 
 	public void componentResized(ComponentEvent e) {
 		drawGrid();
+	}
+
+	@Override
+	public void componentHidden(ComponentEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void componentMoved(ComponentEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void componentShown(ComponentEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }

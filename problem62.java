@@ -1,17 +1,30 @@
 import java.util.HashMap;
+import java.util.Map;
 
 import acm.program.ConsoleProgram;
 
 public class problem62 extends ConsoleProgram{
+	private static final String SENTINEL = "";
 	public void run() {
-		String s;
-		HashMap<String, Integer> map = new HashMap<>();
-		while (!(s = readLine()).isEmpty()) {
-			map.put(s, map.getOrDefault(s, 0) + 1);
+		Map<String, Integer> nameCounts = 
+				new HashMap<String, Integer>();
+		
+		while(true) {
+			String name = readLine("Enter name: ");
+			if(name.equals(SENTINEL)) {
+				break;
+			}
+			
+			if(!nameCounts.containsKey(name)) {
+				nameCounts.put(name, 0);
+			}
+			
+			int newCount = nameCounts.get(name) + 1;
+			nameCounts.put(name, newCount);
 		}
 		
-		for (String name : map.keySet()) {
-			println(name + " : " + map.get(name));
-		}
+		println(nameCounts);
+		
 	}
+
 }

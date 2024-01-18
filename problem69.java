@@ -8,9 +8,9 @@ import acm.program.GraphicsProgram;
 public class problem69 extends GraphicsProgram implements ComponentListener{
 	
 	public void init() {
+		addComponentListener(this);
 		removeAll();
 		drawGrid();
-		addComponentListener(this);
 	}
 
 	private void drawGrid() {

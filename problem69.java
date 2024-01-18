@@ -17,6 +17,7 @@ public class problem69 extends GraphicsProgram implements ComponentListener{
 			addVerticalLine(i);
 			addHorisontalLine(i);
 		}
+		addComponentListener(this);
 	}
 
 	private void addHorisontalLine(int i) {
@@ -27,7 +28,6 @@ public class problem69 extends GraphicsProgram implements ComponentListener{
 
 		GLine line = new GLine(x1, y, x2, y);
 		add(line);
-		addComponentListener(this);
 	}
 
 	private void addVerticalLine(int i) {
@@ -38,7 +38,6 @@ public class problem69 extends GraphicsProgram implements ComponentListener{
 
 		GLine line = new GLine(x, y1, x, y2);
 		add(line);
-		addComponentListener(this);
 	}
 
 	public void componentResized(ComponentEvent e) {

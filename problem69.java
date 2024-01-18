@@ -1,4 +1,5 @@
 import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 
 import acm.graphics.GLine;
 import acm.program.GraphicsProgram;
@@ -6,6 +7,7 @@ import acm.program.GraphicsProgram;
 public class problem69 extends GraphicsProgram {
 	public void run() {
 		drawGrid();
+		addComponentListener((ComponentListener) this);
 	}
 
 	private void drawGrid() {

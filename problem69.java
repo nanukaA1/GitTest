@@ -8,7 +8,6 @@ import acm.program.GraphicsProgram;
 public class problem69 extends GraphicsProgram implements ComponentListener{
 	
 	public void init() {
-		addComponentListener(this);
 		removeAll();
 		drawGrid();
 	}
@@ -28,6 +27,7 @@ public class problem69 extends GraphicsProgram implements ComponentListener{
 
 		GLine line = new GLine(x1, y, x2, y);
 		add(line);
+		addComponentListener(this);
 	}
 
 	private void addVerticalLine(int i) {
@@ -38,6 +38,7 @@ public class problem69 extends GraphicsProgram implements ComponentListener{
 
 		GLine line = new GLine(x, y1, x, y2);
 		add(line);
+		addComponentListener(this);
 	}
 
 	public void componentResized(ComponentEvent e) {

@@ -10,6 +10,7 @@ public class problem69 extends GraphicsProgram implements ComponentListener{
 	public void init() {
 		removeAll();
 		drawGrid();
+		addComponentListener(this);
 	}
 
 	private void drawGrid() {
@@ -27,7 +28,6 @@ public class problem69 extends GraphicsProgram implements ComponentListener{
 
 		GLine line = new GLine(x1, y, x2, y);
 		add(line);
-		addComponentListener(this);
 	}
 
 	private void addVerticalLine(int i) {

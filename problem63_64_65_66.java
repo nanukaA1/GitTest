@@ -5,7 +5,7 @@ import java.util.Map;
 
 import acm.program.ConsoleProgram;
 
-public class problem63_64_65 extends ConsoleProgram{
+public class problem63_64_65_66 extends ConsoleProgram{
 	private static final String SENTINEL = "";
 	public void run() {
 		Map<String, ArrayList<String>> friendLists = 

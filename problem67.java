@@ -4,10 +4,13 @@ import javax.swing.JTextField;
 
 import acm.graphics.*;
 import acm.program.GraphicsProgram;
-
+//67. გააკეთეთ ფოტოების აპლიკაცია. აპლიკაციას უნდა ჰქონდეს ტექსფილდი სადაც შეიძლება
+//ფოტოს(ფაილის) მისამართის ჩაწერა. ენტერზე დაჭერის შემდეგ ეს ფოტო უნდა გამოჩნდეს
+//ფანჯრის ცენტრში.
 public class problem67 extends GraphicsProgram{
 	private JTextField textField;
 	
+	// სემინარზე რანში გვქონდა თავიდან დამატებული და უცნაურად იმიტომ გაიხსნა.
 	public void init() {
 		textField = new JTextField(20);
 		add(textField, SOUTH);
@@ -22,6 +25,7 @@ public class problem67 extends GraphicsProgram{
 	}
 	
 	
+	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == textField) {
 			try {

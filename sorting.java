@@ -3,7 +3,7 @@ import java.util.Comparator;
 
 import acm.program.ConsoleProgram;
 
-public class comparator extends ConsoleProgram {
+public class sorting extends ConsoleProgram {
 	public void run() {
 		ArrayList<String> list = new ArrayList<String>();
 		list.add(readLine());

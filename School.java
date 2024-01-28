@@ -67,6 +67,9 @@ public class School {
 	}
 
 	public void removeTeacher(String teacher) {
-
+		teacherSubject.remove(teacher);
+		for(String subject: subjectTeacher.keySet()) {
+			subjectTeacher.get(subject).remove(teacher);
+		}
 	}
 }

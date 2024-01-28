@@ -14,7 +14,7 @@ public class sorting extends ConsoleProgram {
 		list.sort(c);
 		println(list);
 		
-		int[] arr = {5,6,7,8,9};
+		int[] arr = {90,17,7,80,9};
 		Arrays.sort(arr);
 		println(Arrays.toString(arr));
 	}

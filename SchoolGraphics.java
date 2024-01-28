@@ -48,14 +48,28 @@ public class SchoolGraphics extends GraphicsProgram {
 
 		displayTeach = new JButton("Display Teach");
 		add(displayTeach, SOUTH);
+		
+		addActionListeners();
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == teacherField) {
-			school.addTeacher(teacherField.getText());
+		if (e.getSource() == teachButton && !teachField.getText().equals("")) {
+			school.addTeacher(teachField.getText());
+			clearFields();
 		}
-		if (e.getSource() == pupilField) {
-			school.addPupils(pupilField.getText());
+		if (e.getSource() == subjButton && !subjField.getText().equals("") && !teachField.getText().equals("")) {
+			school.addSubject(teachField.getText(), subjField.getText());
+			clearFields();
 		}
+		if(e.getSource() == pupButton && !subjField.getText().equals("") && !pupField.getText().equals("")){
+			school.addPupil(pupField.getText(), subjField.getText());
+			clearFields();
+		}
+	}
+
+	private void clearFields() {
+		pupField.setText("");
+		teachField.setText("");
+		subjField.setText("");
 	}
 }

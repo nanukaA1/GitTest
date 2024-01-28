@@ -15,13 +15,13 @@ public class SchoolGraphics extends GraphicsProgram {
 
 	public void run() {
 		school = new School();
-		teacherField = new JTextField(20);
+		teacherField = new JTextField(10);
 		add(teacherField, SOUTH);
 
-		subjectField = new JTextField(20);
+		subjectField = new JTextField(10);
 		add(subjectField, SOUTH);
 
-		pupilField = new JTextField(20);
+		pupilField = new JTextField(10);
 		add(pupilField, SOUTH);
 
 		displayPupils = new JButton("display pupils");

@@ -79,7 +79,7 @@ public class SchoolGraphics extends GraphicsProgram {
 
 	private void displayPup(String teach) {
 		removeAll();
-		Iterator<String> it = school.getTeachers(teach);
+		Iterator<String> it = school.getPupils(teach);
 		if (it == null) {
 			return;
 		}

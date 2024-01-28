@@ -69,9 +69,11 @@ public class SchoolGraphics extends GraphicsProgram {
 		}
 		if (e.getSource() == displayTeach && !pupField.getText().equals("")) {
 			displayTeachers(pupField.getText());
+			clearFields();
 		}
 		if (e.getSource() == displayPup && !teachField.getText().equals("")) {
 			displayPup(pupField.getText());
+			clearFields();
 		}
 	}
 

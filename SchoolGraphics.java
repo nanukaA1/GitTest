@@ -1,8 +1,10 @@
 import java.awt.event.ActionEvent;
+import java.util.Iterator;
 
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
+import acm.graphics.GLabel;
 import acm.program.GraphicsProgram;
 
 public class SchoolGraphics extends GraphicsProgram {
@@ -64,6 +66,24 @@ public class SchoolGraphics extends GraphicsProgram {
 		if(e.getSource() == pupButton && !subjField.getText().equals("") && !pupField.getText().equals("")){
 			school.addPupil(pupField.getText(), subjField.getText());
 			clearFields();
+		}
+		if(e.getSource() == displayTeach && !pupField.getText().equals("")) {
+			displayTeachers(pupField.getText());
+		}
+	}
+
+	private void displayTeachers(String pup) {
+		Iterator<String> it = school.getTeachers(pup);
+		if(it == null) {
+			return;
+		}
+		double x = RESULT_X;
+		double y = 5;
+		while(it.hasNext()) {
+			String elem = it.next();
+			GLabel label = new GLabel(elem);
+			add(label,x,y);
+			y+= LINE_H;
 		}
 	}
 

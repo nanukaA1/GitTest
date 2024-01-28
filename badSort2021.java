@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 import acm.program.ConsoleProgram;
+import acm.util.RandomGenerator;
 
 public class badSort2021 extends ConsoleProgram{
 	private int[] arr = new int[5];
@@ -12,13 +13,18 @@ public class badSort2021 extends ConsoleProgram{
 		println(Arrays.toString(arr));
 	}
 	private void sort() {
-		int curr = arr[0];
+		RandomGenerator rgen = RandomGenerator.getInstance();
+		int curr;
 		while(sorted() != true) {
 			for(int i = 0; i < arr.length - 1; i++) {
-				if(curr > arr[i + 1]) {
-					arr[i] = arr[i + 1];
-					curr = arr[i + 1];
-					arr[i + 1] = arr[i];
+				int a = rgen.nextInt(0,arr.length - 1);
+				int b = rgen.nextInt(0,arr.length -1);
+				int min = Math.min(a,b);
+				int max = Math.max(a,b);
+				if(arr[min] > arr[max]) {
+					curr = arr[min];
+					arr[min] = arr[max];
+					arr[max] = curr;
 				}
 			}
 		}

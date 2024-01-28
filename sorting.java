@@ -12,7 +12,8 @@ public class sorting extends ConsoleProgram {
 		list.add(readLine());
 		list.add(readLine());
 		Comparator<String> c = Comparator.comparing((String::length));
-		c = c.reversed();
+		//c = c.reversed();
+		c = c.thenComparing(Comparator.naturalOrder()).reversed();
 		list.sort(c);
 		println(list);
 

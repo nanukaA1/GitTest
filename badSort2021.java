@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import acm.program.ConsoleProgram;
 
 public class badSort2021 extends ConsoleProgram{
@@ -7,7 +9,7 @@ public class badSort2021 extends ConsoleProgram{
 			arr[i] = readInt();
 		}
 		sort();
-		println(arr);
+		println(Arrays.toString(arr));
 	}
 	private void sort() {
 		int curr = arr[0];

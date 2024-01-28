@@ -10,14 +10,23 @@ public class badSort2021 extends ConsoleProgram{
 		println(arr);
 	}
 	private void sort() {
+		int curr = arr[0];
 		while(sorted() != true) {
-			for(int i = 0; i < arr.length; i++) {
-				
+			for(int i = 0; i < arr.length - 1; i++) {
+				if(curr > arr[i + 1]) {
+					arr[i] = arr[i + 1];
+					curr = arr[i + 1];
+					arr[i + 1] = arr[i];
+				}
 			}
 		}
 	}
 	private boolean sorted() {
-		// TODO Auto-generated method stub
-		return false;
+		for(int i = 0; i < arr.length; i++) {
+			if(arr[i] > arr[i+1]) {
+				return false;
+			}	
+		}
+		return true;
 	}
 }

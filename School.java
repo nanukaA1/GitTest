@@ -42,6 +42,9 @@ public class School {
 	}
 
 	public Iterator<String> getTeachers(String pupil) {
+		if(!studentSubject.containsKey(pupil)) {
+			return null;
+		}
 		HashSet<String> teachersForThisStudent = new HashSet<>();
 		for(String subject: studentSubject.get(pupil)) {
 			teachersForThisStudent.addAll(subjectTeacher.get(subject));
@@ -50,6 +53,9 @@ public class School {
 	}
 
 	public Iterator<String> getPupils(String teacher) {
+		if(!teacherSubject.containsKey(teacher)) {
+			return null;
+		}
 		HashSet<String> studentsForThisTeacher = new HashSet<>();
 		for(String subject: teacherSubject.get(teacher)) {
 			studentsForThisTeacher.addAll(subjectStudent.get(subject));
@@ -58,6 +64,6 @@ public class School {
 	}
 
 	public void removeTeacher(String teacher) {
-
+		
 	}
 }

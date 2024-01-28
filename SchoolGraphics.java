@@ -50,7 +50,7 @@ public class SchoolGraphics extends GraphicsProgram {
 
 		displayTeach = new JButton("Display Teach");
 		add(displayTeach, SOUTH);
-		
+
 		addActionListeners();
 	}
 
@@ -63,27 +63,47 @@ public class SchoolGraphics extends GraphicsProgram {
 			school.addSubject(teachField.getText(), subjField.getText());
 			clearFields();
 		}
-		if(e.getSource() == pupButton && !subjField.getText().equals("") && !pupField.getText().equals("")){
+		if (e.getSource() == pupButton && !subjField.getText().equals("") && !pupField.getText().equals("")) {
 			school.addPupil(pupField.getText(), subjField.getText());
 			clearFields();
 		}
-		if(e.getSource() == displayTeach && !pupField.getText().equals("")) {
+		if (e.getSource() == displayTeach && !pupField.getText().equals("")) {
 			displayTeachers(pupField.getText());
+		}
+		if (e.getSource() == displayPup && !teachField.getText().equals("")) {
+			displayPup(pupField.getText());
+		}
+	}
+
+	private void displayPup(String teach) {
+		removeAll();
+		Iterator<String> it = school.getTeachers(teach);
+		if (it == null) {
+			return;
+		}
+		double x = RESULT_X;
+		double y = LINE_H;
+		while (it.hasNext()) {
+			String elem = it.next();
+			GLabel label = new GLabel(elem);
+			add(label, x, y);
+			y += LINE_H;
 		}
 	}
 
 	private void displayTeachers(String pup) {
+		removeAll();
 		Iterator<String> it = school.getTeachers(pup);
-		if(it == null) {
+		if (it == null) {
 			return;
 		}
 		double x = RESULT_X;
-		double y = 5;
-		while(it.hasNext()) {
+		double y = LINE_H;
+		while (it.hasNext()) {
 			String elem = it.next();
 			GLabel label = new GLabel(elem);
-			add(label,x,y);
-			y+= LINE_H;
+			add(label, x, y);
+			y += LINE_H;
 		}
 	}
 

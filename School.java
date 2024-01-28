@@ -14,14 +14,13 @@ public class School {
 		subjectTeacher = new HashMap<>();
 		studentSubject = new HashMap<>();
 	}
-	
 
 	public void addTeacher(String teacher) {
 		teacherSubject.putIfAbsent(teacher, new HashSet<>());
 	}
 
 	public void addSubject(String teacher, String subject) {
-		if(!teacherSubject.containsKey(teacher)){
+		if (!teacherSubject.containsKey(teacher)) {
 			return;
 		}
 		teacherSubject.get(teacher).add(subject);
@@ -30,40 +29,44 @@ public class School {
 	}
 
 	public void addPupil(String pupil, String subject) {
-		if(!subjectTeacher.containsKey(subject)){
+		if (!subjectTeacher.containsKey(subject)) {
 			return;
 		}
 		studentSubject.putIfAbsent(pupil, new HashSet<>());
 		studentSubject.get(pupil).add(subject);
-		
+
 		subjectStudent.putIfAbsent(subject, new HashSet<>());
 		subjectStudent.get(subject).add(pupil);
-		
+
 	}
 
 	public Iterator<String> getTeachers(String pupil) {
-		if(!studentSubject.containsKey(pupil)) {
+		if (!studentSubject.containsKey(pupil)) {
 			return null;
 		}
 		HashSet<String> teachersForThisStudent = new HashSet<>();
-		for(String subject: studentSubject.get(pupil)) {
-			teachersForThisStudent.addAll(subjectTeacher.get(subject));
+		for (String subject : studentSubject.get(pupil)) {
+			if (subjectTeacher.containsKey(subject)) {
+				teachersForThisStudent.addAll(subjectTeacher.get(subject));
+			}
 		}
 		return teachersForThisStudent.iterator();
 	}
 
 	public Iterator<String> getPupils(String teacher) {
-		if(!teacherSubject.containsKey(teacher)) {
+		if (!teacherSubject.containsKey(teacher)) {
 			return null;
 		}
 		HashSet<String> studentsForThisTeacher = new HashSet<>();
-		for(String subject: teacherSubject.get(teacher)) {
-			studentsForThisTeacher.addAll(subjectStudent.get(subject));
+		for (String subject : teacherSubject.get(teacher)) {
+			if (subjectStudent.containsKey(subject)) {
+				studentsForThisTeacher.addAll(subjectStudent.get(subject));
+			}
 		}
 		return studentsForThisTeacher.iterator();
 	}
 
 	public void removeTeacher(String teacher) {
-		
+
 	}
 }

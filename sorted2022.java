@@ -5,13 +5,13 @@ import acm.program.ConsoleProgram;
 
 public class sorted2022 extends ConsoleProgram {
 	public void run() {
-		println(almostSorted(new ArrayList<>(Arrays.asList(2, 3, 4, 5))));
+		println(almostSorted(new ArrayList<>(Arrays.asList(3, 1, 5, 2, 4))));
 	}
 
 	private boolean almostSorted(ArrayList<Integer> a) {
 		for (int i = 0; i < a.size(); i++) {
 			for (int j = i + 1; j < a.size(); j++) {
-				swapElements(a,i,j);
+				swapElements(a, i, j);
 				reverseElements(a, i, j);
 				if (Sorted(a)) {
 					return true;
@@ -20,6 +20,7 @@ public class sorted2022 extends ConsoleProgram {
 		}
 		return false;
 	}
+
 	private boolean Sorted(ArrayList<Integer> a) {
 		for (int i = 1; i < a.size(); i++) {
 			if (a.get(i) < a.get(i - 1)) {

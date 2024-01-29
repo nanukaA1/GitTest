@@ -17,7 +17,7 @@ public class nim2021 extends GraphicsProgram {
 
 	private void addCircles() {
 		circles = new ArrayList<>();
-		double startingX = (getWidth() - 11 * 2 *RADIUS - 10 * 2 * STEP) / 2;
+		double startingX = getWidth() / 2 - 11 * 2 * RADIUS - 10 * STEP;
 		for (int i = 0; i < 11; i++) {
 			GOval circle = new GOval(2 * RADIUS, 2 * RADIUS);
 			circle.setFilled(true);

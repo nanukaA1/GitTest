@@ -14,8 +14,8 @@ public class zero2022 extends ConsoleProgram {
 					int currj = j;
 					for (int l = 0; l < m.length; l++) {
 						for (int x = 0; x < m[0].length; x++) {
-							m[curri][x] = 0;
-							//m[l][currj] = 0;
+							//m[curri][x] = 0;
+							m[l][currj] = 0;
 						}
 					}
 				}

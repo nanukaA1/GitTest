@@ -36,6 +36,7 @@ public class mamashviloba2014 extends ConsoleProgram {
 		getCousins("glenn");
 	}
 
+
 	private ArrayList<String> getCousins(String name) {
 		ArrayList<String> cousins = new ArrayList<>();
 		String father = null;

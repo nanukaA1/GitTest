@@ -22,13 +22,13 @@ public class mamashviloba2014 extends ConsoleProgram {
 					break;
 				}
 				String[] names = newLine.split(" ");
-				if (names.length == 2) {
+				
 					String child = names[0];
 					String father = names[1];
 					System.out.println(child + " "+father);
 					fatherSon.putIfAbsent(father, new HashSet<>());
 					fatherSon.get(father).add(child);
-				}
+				
 			}
 
 		} catch (Exception e) {

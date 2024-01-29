@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
+import acm.graphics.GLabel;
 import acm.graphics.GObject;
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
@@ -10,6 +11,7 @@ public class nim2021 extends GraphicsProgram {
 	private ArrayList<GOval> circles;
 	private static final int RADIUS = 20;
 	private static final int STEP = 10;
+	private int player = 0;
 
 	public void run() {
 		addCircles();
@@ -43,10 +45,14 @@ public class nim2021 extends GraphicsProgram {
 			return;
 		}
 		removeCircles(num);
+		player = (player + 1) % 2;
+		if (circles.size() == 0) {
+			add(new GLabel("player" + (player + 1) + " won"), 50, 50);
+		}
 	}
 
 	private void removeCircles(int num) {
-		for(int i = 0; i < num; i++) {
+		for (int i = 0; i < num; i++) {
 			remove(circles.get(circles.size() - 1));
 			circles.remove(circles.size() - 1);
 		}

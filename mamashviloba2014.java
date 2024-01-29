@@ -13,7 +13,27 @@ public class mamashviloba2014 extends ConsoleProgram {
 	private HashMap<String, HashSet<String>> fatherSon;
 
 	public void run() {
-		getCousins("raghac.java", "glenn");
+		try {
+			String newLine = "";
+			BufferedReader reader = new BufferedReader(new FileReader("raghac"));
+			while (true) {
+				newLine = reader.readLine();
+				if (newLine == null) {
+					break;
+				}
+				String[] names = newLine.split(" ");
+				if (names.length == 2) {
+					String child = names[0];
+					String father = names[1];
+					System.out.println(child + " "+father);
+					fatherSon.putIfAbsent(father, new HashSet<>());
+					fatherSon.get(father).add(child);
+				}
+			}
+
+		} catch (Exception e) {
+			
+		}
 	}
 
 	private ArrayList<String> getCousins(String fileName, String name) {
@@ -57,23 +77,25 @@ public class mamashviloba2014 extends ConsoleProgram {
 
 	private void read(String fileName) {
 		try {
+			String newLine = "";
 			BufferedReader reader = new BufferedReader(new FileReader(fileName));
 			while (true) {
-				String newLine = reader.readLine();
+				newLine = reader.readLine();
 				if (newLine == null) {
-					return;
+					break;
 				}
 				String[] names = newLine.split(" ");
 				if (names.length == 2) {
 					String child = names[0];
 					String father = names[1];
+					System.out.println(child + " "+father);
 					fatherSon.putIfAbsent(father, new HashSet<>());
 					fatherSon.get(father).add(child);
 				}
 			}
 
-		} catch (IOException e) {
-			return;
+		} catch (Exception e) {
+			
 		}
 	}
 

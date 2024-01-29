@@ -37,7 +37,7 @@ public class nim2021 extends GraphicsProgram {
 			num = 1;
 		} else if (circles.size() > 0 && obj == circles.get(circles.size() - 2)) {
 			num = 2;
-		} else if (circles.size() > 0 && obj == circles.get(circles.size() - 2)) {
+		} else if (circles.size() > 0 && obj == circles.get(circles.size() - 3)) {
 			num = 3;
 		} else {
 			return;
@@ -48,7 +48,7 @@ public class nim2021 extends GraphicsProgram {
 	private void removeCircles(int num) {
 		for(int i = 0; i < num; i++) {
 			remove(circles.get(circles.size() - 1));
-			//circles.remove(circles.size() - 1);
+			circles.remove(circles.size() - 1);
 		}
 	}
 }

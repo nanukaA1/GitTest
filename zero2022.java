@@ -2,7 +2,9 @@ import acm.program.ConsoleProgram;
 
 public class zero2022 extends ConsoleProgram {
 	public void run() {
-		int[][] m = { { 1, 2, 3 }, { 0, 7, 8 }, { 4, 5, 0 } };
+		int[][] m = { { 1, 2, 3 }, 
+				    { 0, 7, 8 }, 
+				    { 4, 5, 9 } };
 		zero(m);
 	}
 

@@ -22,16 +22,16 @@ public class mamashviloba2014 extends ConsoleProgram {
 					break;
 				}
 				String[] names = newLine.split(" ");
-				
-					String child = names[0];
-					String father = names[1];
-					fatherSon.putIfAbsent(father, new HashSet<>());
-					fatherSon.get(father).add(child);
-					
+
+				String child = names[0];
+				String father = names[1];
+				fatherSon.putIfAbsent(father, new HashSet<>());
+				fatherSon.get(father).add(child);
+
 			}
 
 		} catch (Exception e) {
-			
+
 		}
 		getCousins("glenn");
 	}
@@ -46,56 +46,32 @@ public class mamashviloba2014 extends ConsoleProgram {
 			}
 		}
 		if (father == null) {
-            return cousins; 
-        }
-		
-		 String grandfather = null;
-	        for (String key : fatherSon.keySet()) {
-	            if (fatherSon.get(key).contains(father)) {
-	                grandfather = key;
-	                break;
-	            }
-	        }
-	        if (grandfather == null) {
-	            return cousins;
-	        }
-	        HashSet<String> uncles = fatherSon.get(grandfather);
-	        for(String uncle: uncles){
-	        	 if (!uncle.equals(father)) {
-	                 cousins.addAll(fatherSon.getOrDefault(uncle, new HashSet<>()));
-	             }
-	        }
-	        HashSet<String> fatherChildren = fatherSon.get(father);
-	        for (String cousin : new ArrayList<>(cousins)) {
-	            if (fatherChildren.contains(cousin) || cousin.equals(name)) {
-	                cousins.remove(cousin);
-	            }
-	        }
-	        return cousins;
-	}
-
-	private void read(String fileName) {
-		try {
-			String newLine = "";
-			BufferedReader reader = new BufferedReader(new FileReader(fileName));
-			while (true) {
-				newLine = reader.readLine();
-				if (newLine == null) {
-					break;
-				}
-				String[] names = newLine.split(" ");
-				if (names.length == 2) {
-					String child = names[0];
-					String father = names[1];
-					System.out.println(child + " "+father);
-					fatherSon.putIfAbsent(father, new HashSet<>());
-					fatherSon.get(father).add(child);
-				}
-			}
-
-		} catch (Exception e) {
-			
+			return cousins;
 		}
+
+		String grandfather = null;
+		for (String key : fatherSon.keySet()) {
+			if (fatherSon.get(key).contains(father)) {
+				grandfather = key;
+				break;
+			}
+		}
+		if (grandfather == null) {
+			return cousins;
+		}
+		HashSet<String> uncles = fatherSon.get(grandfather);
+		for (String uncle : uncles) {
+			if (!uncle.equals(father)) {
+				cousins.addAll(fatherSon.getOrDefault(uncle, new HashSet<>()));
+			}
+		}
+		HashSet<String> fatherChildren = fatherSon.get(father);
+		for (String cousin : new ArrayList<>(cousins)) {
+			if (fatherChildren.contains(cousin) || cousin.equals(name)) {
+				cousins.remove(cousin);
+			}
+		}
+		return cousins;
 	}
 
 }

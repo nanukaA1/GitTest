@@ -5,7 +5,7 @@ import acm.program.ConsoleProgram;
 
 public class sorted2022 extends ConsoleProgram {
 	public void run() {
-		almostSorted(new ArrayList<>(Arrays.asList(2, 3, 4, 5)));
+		println(almostSorted(new ArrayList<>(Arrays.asList(2, 3, 4, 5))));
 	}
 
 	private boolean almostSorted(ArrayList<Integer> a) {

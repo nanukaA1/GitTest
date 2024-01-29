@@ -48,7 +48,7 @@ public class nim2021 extends GraphicsProgram {
 	private void removeCircles(int num) {
 		for(int i = 0; i < num; i++) {
 			remove(circles.get(circles.size() - 1));
-			circles.remove(circles.size() - 1);
+			//circles.remove(circles.size() - 1);
 		}
 	}
 }

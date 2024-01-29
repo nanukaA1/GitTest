@@ -8,7 +8,7 @@ public class zero2022 extends ConsoleProgram {
 
 	private void zero(int[][] m) {
 		for (int i = 0; i < m.length; i++) {
-			for (int j = 0; j < m[0].length; i++) {
+			for (int j = 0; j < m[0].length; j++) {
 				if (m[i][j] == 0) {
 					int curri = i;
 					int currj = j;

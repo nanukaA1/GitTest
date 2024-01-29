@@ -28,7 +28,7 @@ public class mamashviloba2014 extends ConsoleProgram {
 					System.out.println(child + " "+father);
 					fatherSon.putIfAbsent(father, new HashSet<>());
 					fatherSon.get(father).add(child);
-				
+					
 			}
 
 		} catch (Exception e) {

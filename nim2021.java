@@ -25,6 +25,7 @@ public class nim2021 extends GraphicsProgram {
 			double x = startingX + i * (STEP + 2 * RADIUS);
 			double y = (getHeight() - 2 * RADIUS) / 2;
 			add(circle, x, y);
+			circles.add(circle);
 		}
 	}
 

@@ -22,7 +22,7 @@ public class nim2021 extends GraphicsProgram {
 			GOval circle = new GOval(2 * RADIUS, 2 * RADIUS);
 			circle.setFilled(true);
 			circle.setFillColor(Color.GRAY);
-			double x;
+			double x = startingX + i * (STEP + 2 * RADIUS);
 			double y = (getHeight() - 2 * RADIUS) / 2;
 			add(circle, x, y);
 		}

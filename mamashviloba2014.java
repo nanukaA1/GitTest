@@ -25,7 +25,6 @@ public class mamashviloba2014 extends ConsoleProgram {
 				
 					String child = names[0];
 					String father = names[1];
-					System.out.println(child + " "+father);
 					fatherSon.putIfAbsent(father, new HashSet<>());
 					fatherSon.get(father).add(child);
 					
@@ -34,11 +33,11 @@ public class mamashviloba2014 extends ConsoleProgram {
 		} catch (Exception e) {
 			
 		}
+		getCousins("glenn");
 	}
 
-	private ArrayList<String> getCousins(String fileName, String name) {
+	private ArrayList<String> getCousins(String name) {
 		ArrayList<String> cousins = new ArrayList<>();
-		read(fileName);
 		String father = null;
 		for (String key : fatherSon.keySet()) {
 			if (fatherSon.get(key).contains(name)) {

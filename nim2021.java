@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
+import acm.graphics.GObject;
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
 
@@ -30,6 +31,24 @@ public class nim2021 extends GraphicsProgram {
 	}
 
 	public void mouseClicked(MouseEvent e) {
+		GObject obj = getElementAt(e.getX(), e.getY());
+		int num = -1;
+		if (circles.size() > 0 && obj == circles.get(circles.size() - 1)) {
+			num = 1;
+		} else if (circles.size() > 0 && obj == circles.get(circles.size() - 2)) {
+			num = 2;
+		} else if (circles.size() > 0 && obj == circles.get(circles.size() - 2)) {
+			num = 3;
+		} else {
+			return;
+		}
+		removeCircles(num);
+	}
 
+	private void removeCircles(int num) {
+		for(int i = 0; i < num; i++) {
+			remove(circles.get(circles.size() - 1));
+			circles.remove(circles.size() - 1);
+		}
 	}
 }

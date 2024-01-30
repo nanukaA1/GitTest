@@ -50,8 +50,8 @@ public class slideGallery2014 extends GraphicsProgram {
 	}
 
 	private void drawImages() {
-		int x = 6;
-		int y = IMG_DST;
+		double x = IMG_DST;
+		double y = IMG_DST;
 		for (int i = 0; i < images.size(); i++) {
 			GImage newImage = new GImage(images.get(i));
 			newImage.setSize(IMG_H, IMG_H);

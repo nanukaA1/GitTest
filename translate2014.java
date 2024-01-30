@@ -7,7 +7,11 @@ public class translate2014 extends ConsoleProgram{
 	private String translateToTitle(String text){
 		String translated = "";
 		String[] words = text.split(" ");
-		println(words[0]);
+		for(int i = 0; i < words.length; i++) {
+			 words[i].toLowerCase();
+			 words[i].substring(0,1).toUpperCase();
+			 println(words[i]);
+		}
 		return translated;
 	}
 

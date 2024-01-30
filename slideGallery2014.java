@@ -58,10 +58,10 @@ public class slideGallery2014 extends GraphicsProgram {
 			newImage.setLocation(x, y);
 			add(newImage);
 			x += IMG_H + IMG_DST;
-			if (x + IMG_H + IMG_DST > getWidth()) {
-				y += IMG_H + IMG_DST;
-				x = IMG_DST;
-			}
+//			if (x + IMG_H + IMG_DST > getWidth()) {
+//				y += IMG_H + IMG_DST;
+//				x = IMG_DST;
+//			}
 		}
 	}
 

@@ -50,7 +50,7 @@ public class slideGallery2014 extends GraphicsProgram {
 	}
 
 	private void drawImages() {
-		int x = IMG_DST;
+		int x = 6;
 		int y = IMG_DST;
 		for (int i = 0; i < images.size(); i++) {
 			GImage newImage = new GImage(images.get(i));
@@ -58,10 +58,10 @@ public class slideGallery2014 extends GraphicsProgram {
 			newImage.setLocation(x, y);
 			add(newImage);
 			x += IMG_H + IMG_DST;
-//			if (x + IMG_H + IMG_DST > getWidth()) {
-//				y += IMG_H + IMG_DST;
-//				x = IMG_DST;
-//			}
+			if (x + IMG_H + IMG_DST > getWidth()) {
+				y += IMG_H + IMG_DST;
+				x = IMG_DST;
+			}
 		}
 	}
 

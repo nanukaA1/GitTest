@@ -29,7 +29,7 @@ public class yvelazeplis2018 extends ConsoleProgram {
 
 	private int maxHashSet() {
 		Iterator<Integer> iterator = plusSizes.iterator();
-		int max = Integer.MIN_VALUE;
+		int max = 0;
 
 		while (iterator.hasNext()) {
 			int current = iterator.next();

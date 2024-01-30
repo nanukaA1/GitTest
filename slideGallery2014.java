@@ -14,7 +14,15 @@ public class slideGallery2014 extends GraphicsProgram {
 
 	public void run() {
 		addImages();
+		update();
+	}	
+	
+
+	private void update() {
+		removeAll();
+		drawImages();
 	}
+
 
 	private void addImages() {
 		images.add("MehranS.jpg");
@@ -22,6 +30,8 @@ public class slideGallery2014 extends GraphicsProgram {
 		images.add("KimberL.jpg");
 		images.add("BenN.jpg");
 		images.add("LekanW.jpg");
+		images.add("JessicaL.jpg");
+		images.add("JoelG.jpg");
 		GImage image = new GImage("images/" + images.get(4));
 		image.setSize(200, 200);
 		image.setLocation(getWidth() / 2, getHeight() / 2);

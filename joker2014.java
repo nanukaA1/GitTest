@@ -17,6 +17,9 @@ public class joker2014 extends ConsoleProgram {
 			for (int j = 0; j < 2; j++) {
 				cards.add(true);
 			}
+			for (int j = 0; j < 2; j++) {
+				cards.add(false);
+			}
 			int jokersCount = 0;
 			for (int j = 0; j < 9; j++) {
 				int index = rgen.nextInt(0, cards.size() - 1);

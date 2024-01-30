@@ -5,7 +5,7 @@ import acm.program.ConsoleProgram;
 public class countAB2018 extends ConsoleProgram {
 	private HashSet<String> uniqueStrings = new HashSet<>();
 	public void run() {
-		countAB("abab");
+		println(countAB("abab"));
 	}
 
 	private int countAB(String string) {

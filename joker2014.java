@@ -17,7 +17,7 @@ public class joker2014 extends ConsoleProgram {
 			for (int j = 0; j < 2; j++) {
 				cards.add(true);
 			}
-			for (int j = 0; j < 2; j++) {
+			for (int j = 0; j < 34; j++) {
 				cards.add(false);
 			}
 			int jokersCount = 0;

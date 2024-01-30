@@ -23,6 +23,7 @@ public class slideGallery2014 extends GraphicsProgram {
 		images.add("BenN.jpg");
 		images.add("LekanW.jpg");
 		GImage image = new GImage(images.get(0));
+		image.setSize(100,100);
 		image.setLocation(getWidth() / 2, getHeight() / 2);
 		add(image);
 	}

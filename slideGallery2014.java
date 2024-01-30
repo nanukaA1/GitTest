@@ -73,9 +73,5 @@ public class slideGallery2014 extends GraphicsProgram {
 		images.add("LekanW.jpg");
 		images.add("JessicaL.jpg");
 		images.add("JoelG.jpg");
-		GImage image = new GImage("images/" + images.get(4));
-		image.setSize(200, 200);
-		image.setLocation(getWidth() / 2, getHeight() / 2);
-		add(image);
 	}
 }

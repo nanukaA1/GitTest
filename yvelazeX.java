@@ -47,8 +47,8 @@ public class yvelazeX extends ConsoleProgram{
 	private int findX(int[][] m, int i, int j, int rows, int cols) {
 		 int size = 1;
 	     int left = j - 1, right = j + 1, up = i - 1, down = i + 1;
-	     while(left >= 0 && right <= cols && up >=0 && down <= rows && m[down][left] == 1 && m[down][right] == 1 && m[up][left] ==1
-	    		 && m[up][right] == 1) {
+	     while(left >= 0 && right < cols && up >= 0 && down < rows && m[up][left] == 1 && m[up][right] == 1
+	                && m[down][left] == 1 && m[down][right] == 1) {
 	    	 size++;
 	            left--;
 	            right++;

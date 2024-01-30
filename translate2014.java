@@ -2,7 +2,7 @@ import acm.program.ConsoleProgram;
 
 public class translate2014 extends ConsoleProgram {
 	public void run() {
-		translateToTitle("etErNAl sUNShiNe OF tHe Spotless mIND");
+		println(translateToTitle("etErNAl sUNShiNe OF tHe Spotless mIND"));
 	}
 
 	private String translateToTitle(String text) {
@@ -12,6 +12,7 @@ public class translate2014 extends ConsoleProgram {
 		for (int i = 0; i < words.length; i++) {
 			words1[i] =Character.toUpperCase(words[i].charAt(0))+ words[i].substring(1).toLowerCase();
 			println(words1[i]);
+			translated+=words1[i];
 		}
 		return translated;
 	}

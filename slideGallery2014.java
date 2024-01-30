@@ -50,18 +50,18 @@ public class slideGallery2014 extends GraphicsProgram {
 	}
 
 	private void drawImages() {
-		double x = IMG_DST;
-		double y = IMG_DST;
+		int x = IMG_DST;
+		int y = IMG_DST;
 		for (int i = 0; i < images.size(); i++) {
-			GImage newImage = new GImage(images.get(i));
-//			newImage.setSize(IMG_H, IMG_H);
-//			newImage.setLocation(x, y);
-			add(newImage);
-			x += IMG_H + IMG_DST;
-			if (x + IMG_H + IMG_DST > getWidth()) {
-				y += IMG_H + IMG_DST;
+			GImage myImage = new GImage(images.get(i));
+			myImage.setSize(IMG_H, IMG_H);
+			if (x + IMG_H > getWidth()) {
+				y += IMG_DST + IMG_H;
 				x = IMG_DST;
 			}
+			myImage.setLocation(x, y);
+			add(myImage);
+			x += IMG_DST + IMG_H;
 		}
 	}
 

@@ -15,6 +15,7 @@ public class badSort2021 extends ConsoleProgram{
 	private void sort() {
 		RandomGenerator rgen = RandomGenerator.getInstance();
 		int curr;
+		
 		while(sorted() != true) {
 			for(int i = 0; i < arr.length - 1; i++) {
 				int a = rgen.nextInt(0,arr.length - 1);

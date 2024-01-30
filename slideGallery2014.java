@@ -16,11 +16,15 @@ public class slideGallery2014 extends GraphicsProgram {
 
 	public void run() {
 		addImages();
+		addMouseListeners();
 		update();
 	}
 
 	public void mouseClicked(MouseEvent e) {
 		if (allPics) {
+			int x = (int) e.getX();
+			int y = (int) e.getY();
+			currImage = (GImage) getElementAt(x, y);
 			allPics = false;
 		} else {
 			if (e.getX() < getWidth() / 3) {
@@ -45,8 +49,9 @@ public class slideGallery2014 extends GraphicsProgram {
 	}
 
 	private void drawOne() {
-		// TODO Auto-generated method stub
-
+		currImage.setSize(getWidth(), getHeight());
+		currImage.setLocation(0, 0);
+		add(currImage);
 	}
 
 	private void drawImages() {

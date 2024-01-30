@@ -16,7 +16,7 @@ public class slideGallery2014 extends GraphicsProgram {
 
 	public void run() {
 		addImages();
-		//update();
+		update();
 	}
 
 	public void mouseClicked(MouseEvent e) {
@@ -38,7 +38,7 @@ public class slideGallery2014 extends GraphicsProgram {
 	private void update() {
 		removeAll();
 		if (allPics) {
-			drawImages();
+			//drawImages();
 		} else {
 			drawOne();
 		}

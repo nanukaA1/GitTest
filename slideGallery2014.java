@@ -38,7 +38,7 @@ public class slideGallery2014 extends GraphicsProgram {
 	private void update() {
 		removeAll();
 		if (allPics) {
-			//drawImages();
+			drawImages();
 		} else {
 			drawOne();
 		}

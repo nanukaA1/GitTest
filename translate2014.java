@@ -10,6 +10,7 @@ public class translate2014 extends ConsoleProgram {
 		String[] words = text.split(" ");
 		for (int i = 0; i < words.length; i++) {
 			words[i] = words[i].toLowerCase();
+			Character.toUpperCase(words[i].charAt(0));
 			println(words[i]);
 		}
 		return translated;

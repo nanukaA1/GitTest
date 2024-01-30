@@ -8,25 +8,23 @@ public class yvelazeplis2018 extends ConsoleProgram {
 
     public void run() {
         int[][] m = {
-            {0, 0, 0, 0, 0, 1, 0, 0,1},
-            {0, 0, 0, 0, 1, 1, 1, 0,1},
-            {0, 0, 1, 0, 0, 1, 0, 0,1},
-            {0, 1, 1, 1, 1, 1, 1, 1,1},
-            {0, 0, 1, 0, 0, 1, 1, 0,1},
-            {0, 0, 1, 0, 0, 1, 0, 0,1},
-            {0, 0, 1, 0, 0, 1, 0, 0,1}
+            {0, 0, 0, 0, 0, 1, 0, 0, 1},
+            {0, 0, 0, 0, 1, 1, 1, 0, 1},
+            {0, 0, 1, 0, 0, 1, 0, 0, 1},
+            {0, 1, 1, 1, 1, 1, 1, 1, 1},
+            {0, 0, 1, 0, 0, 1, 1, 0, 1},
+            {0, 0, 1, 0, 0, 1, 0, 0, 1},
+            {0, 0, 1, 0, 0, 1, 0, 0, 1}
         };
 
-        findPlus(m);
+        findPluses(m);
     }
 
-    private void findPlus(int[][] m) {
-        int rows = m.length;
-        int cols = m[0].length;
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
+    private void findPluses(int[][] m) {
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m[0].length; j++) {
                 if (m[i][j] == 1) {
-                    int size = findPlus(m, i, j, rows, cols);
+                    int size = findPlus(m, i, j, m.length, m[0].length);
                     plusSizes.add(size);
                 }
             }

@@ -30,8 +30,8 @@ public class spaceRocks extends GraphicsProgram {
 			rock.setFilled(true);
 			Color color = rgen.nextColor();
 			rock.setFillColor(color);
-			add(rock, x, y);
 			rocks.add(rock);
+			add(rock, x, y);
 		}
 	}
 

@@ -2,7 +2,7 @@ import acm.program.ConsoleProgram;
 
 public class raffle extends ConsoleProgram {
 	public void run() {
-		checkRaffleDistance("sd5s","sd4s");
+		checkRaffleDistance("sd599s","sd477s");
 	}
 
 	private void checkRaffleDistance(String winningVal, String yourVal) {

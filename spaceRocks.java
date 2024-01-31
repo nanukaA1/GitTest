@@ -59,6 +59,7 @@ public class spaceRocks extends GraphicsProgram {
 				rocks.set(lastSelectionIndex, (GOval) current);     
 				rocks.set(currentSelectionIndex, (GOval) last);     
 				last= null; 
+				reposition();
 			}
 		}
 	}

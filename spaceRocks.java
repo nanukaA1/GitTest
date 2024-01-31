@@ -16,7 +16,6 @@ public class spaceRocks extends GraphicsProgram {
 	private ArrayList<GOval> rocks;
 
 	public void run() {
-		setSize(ROCK_DIAMETER * 7 + ROCK_SPACING * 7, ROCK_DIAMETER * 2);
 		addRocks();
 		addMouseListeners();
 	}

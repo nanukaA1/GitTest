@@ -15,7 +15,7 @@ public class spaceRocks extends GraphicsProgram {
 	private GObject last;
 	private ArrayList<GOval> rocks;
 
-	public void run() {
+	public void init() {
 		addRocks();
 		addMouseListeners();
 	}

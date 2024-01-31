@@ -6,7 +6,8 @@ public class spaceRocks extends GraphicsProgram{
 	private static final int ROCK_DIAMETER = 80;  
 	private static final int ROCK_SPACING = 20;
 	public void run(){
-		setSize(ROCK_DIAMETER * 7 + ROCK_SPACING * 7,ROCK_DIAMETER);
+		setSize(ROCK_DIAMETER * 7 + ROCK_SPACING * 7 
+				+ 80,ROCK_DIAMETER);
 		addRocks();
 	}
 

@@ -13,7 +13,7 @@ public class spaceRocks extends GraphicsProgram {
 	private static final int ROCK_SPACING = 20;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private GObject last;
-	private ArrayList<GOval> rocks;
+	private ArrayList<GOval> rocks = new ArrayList<>();
 
 	public void init() {
 		addRocks();

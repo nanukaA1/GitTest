@@ -1,10 +1,14 @@
+import java.awt.Color;
+
 import acm.graphics.GOval;
 import acm.program.GraphicsProgram;
+import acm.util.RandomGenerator;
 
 public class spaceRocks extends GraphicsProgram{
 	private static final int NUM_ROCKS = 8;     
 	private static final int ROCK_DIAMETER = 80;  
 	private static final int ROCK_SPACING = 20;
+	private RandomGenerator rgen = RandomGenerator.getInstance();
 	public void run(){
 		setSize(ROCK_DIAMETER * 7 + ROCK_SPACING * 7,ROCK_DIAMETER * 2);
 		addRocks();
@@ -16,6 +20,9 @@ public class spaceRocks extends GraphicsProgram{
 		for(int i = 0; i < 7;i++){
 			GOval rock = new GOval(ROCK_DIAMETER, ROCK_DIAMETER);
 			x = ROCK_DIAMETER * i + ROCK_SPACING * i;
+			rock.setFilled(true);
+			Color color = rgen.nextColor();
+			rock.setFillColor(color);
 			add(rock,x,y);
 		}
 	}

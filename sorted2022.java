@@ -34,7 +34,7 @@ public class sorted2022 extends ConsoleProgram {
 		a.set(i, a.get(j));
 		a.set(j, tmp);
 	}
-
+	
 	private void reverseElements(ArrayList<Integer> a, int i, int j) {
 		int mid = (j - i + 1) / 2;
 		for (int k = 0; k < mid; k++) {

@@ -49,7 +49,16 @@ public class spaceRocks extends GraphicsProgram {
 			last = current;
 		} else {
 			if (last == current) {
+				rocks.remove(current);
 				remove(current);
+				last = null;
+				reposition();
+			} else {
+				int lastSelectionIndex = rocks.indexOf(last);     
+				int currentSelectionIndex = rocks.indexOf(current);    
+				rocks.set(lastSelectionIndex, (GOval) current);     
+				rocks.set(currentSelectionIndex, (GOval) last);     
+				last= null; 
 			}
 		}
 	}

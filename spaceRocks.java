@@ -15,7 +15,8 @@ public class spaceRocks extends GraphicsProgram {
 	private GObject last;
 	private ArrayList<GOval> rocks = new ArrayList<>();
 
-	public void init() {
+	public void run() {
+		setSize(ROCK_DIAMETER * 7 + ROCK_SPACING * 7, ROCK_DIAMETER * 2);
 		addRocks();
 		addMouseListeners();
 	}
@@ -29,8 +30,8 @@ public class spaceRocks extends GraphicsProgram {
 			rock.setFilled(true);
 			Color color = rgen.nextColor();
 			rock.setFillColor(color);
-			rocks.add(rock);
 			add(rock, x, y);
+			rocks.add(rock);
 		}
 	}
 
